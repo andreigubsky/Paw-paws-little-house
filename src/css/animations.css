@@ -1,18 +1,30 @@
-@keyframes slide {
-  from {
-    transform: translateX(-140%) translateY(-50%);
-  }
-  to {
-    transform: translateX(-104%) translateY(-50%);
-  }
+/* animations.css
+ ready animation for loader */
+.loader {
+    width: 48px;
+    height: 48px;
+    left: 45%;
+    top: 20%;
+    position: absolute;
+    border: 5px solid lightgray;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    display: none;
 }
-@keyframes stretch {
-  from {
-    opacity: 0;
-    transform: translateX(-50%) translateY(100%) scale(0.2);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(-50%) translateY(100%) scale(1);
-  }
+
+.loader.is-shown {
+    display: inline-block;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
