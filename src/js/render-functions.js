@@ -72,7 +72,7 @@ export function createTemplatePet(pet) {
   return `
   <li class="pet-card">
     <div class="pet-card__container">
-        <img class="pet-card__image" src="${pet.image}" alt="${pet.name}" />
+        <img class="pet-card__image" src="${pet.image}" alt="${pet.name}" loading="lazy"/>
       
         <p class="pet-card__species">${pet.species}</p>
 
