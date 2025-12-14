@@ -5,10 +5,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import '../css/about-us.css';
 
-const container =
+const SwiperContainer =
   document.querySelector('.about-us-slider .mySwiper') || document.querySelector('.mySwiper');
-if (container) {
-  new Swiper(container, {
+if (SwiperContainer) {
+  new Swiper(SwiperContainer, {
     modules: [Navigation, Pagination, Keyboard],
     slidesPerView: 1,
     spaceBetween: 30,

@@ -1,6 +1,4 @@
 /* about-us.css */
-/* =============================================== */
-
 .about-us {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -77,13 +75,44 @@
 .about-us-slider .swiper-pagination {
     position: static;
     display: flex;
-    gap: 8px;
-
+    gap: 9px;
+    align-items: center;
 }
 
-.about-us-slider .swiper-pagination-bullet-active {
-    background-color: var(--color-scheme-1-text);
+/* ===============БУЛЕТИ=============== */
+.about-us-slider .swiper-pagination {
+    display: flex;
+    align-items: center;
+    gap: 9px;
 }
+
+
+@media only screen and (max-width: 767px) {
+    .about-us-slider .swiper-pagination-bullet {
+        width: 4px;
+        height: 4px;
+        transition: 200ms ease;
+    }
+
+    .about-us-slider .swiper-pagination-bullet-active+.swiper-pagination-bullet {
+        width: 6px;
+        height: 6px;
+    }
+
+
+    .about-us-slider .swiper-pagination-bullet:has(+ .swiper-pagination-bullet-active) {
+        width: 6px;
+        height: 6px;
+    }
+
+    .about-us-slider .swiper-pagination-bullet-active {
+        width: 8px;
+        height: 8px;
+        background: var(--color-scheme-1-text);
+    }
+}
+
+/* ===============БУЛЕТИ-кінець=============== */
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 0;
@@ -164,7 +193,6 @@
     }
 
     .swiper-wrapper {
-
         height: 404px;
     }
 
@@ -208,9 +236,9 @@
     .about-us-slider-controls .swiper-pagination {
         position: static;
         display: flex;
-        gap: 8px;
         justify-content: center;
-        margin-top: 34px;
+        margin-top: 24px;
+        padding: 10px;
     }
 
     .about-us-slider .swiper-button-prev {
@@ -219,6 +247,16 @@
 
     .about-us-slider .swiper-button-next {
         right: -24px;
+    }
+
+    .about-us-slider .swiper-pagination-bullet {
+        transition: 200ms ease;
+    }
+
+    .about-us-slider .swiper-pagination-bullet-active {
+        width: 8px;
+        height: 8px;
+        background: var(--color-scheme-1-text);
     }
 
 
@@ -269,8 +307,6 @@
     }
 
     .about-us-slider-controls .swiper-pagination {
-        margin-top: 58px;
+        margin-top: 48px;
     }
-
-
 }
