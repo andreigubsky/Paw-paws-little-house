@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/paw-paws-little-house/",
+    "build": "vite build --base=/Paw-paws-little-house/",
     "preview": "vite preview",
     "format": "prettier --write \"src/**/*.{js,css,html,json,md}\""
   },
