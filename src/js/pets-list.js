@@ -10,6 +10,7 @@ const refs = {
   showMoreBtn: document.querySelector('.js-pet-show-more-btn'),
   petList: document.querySelector('.js-pet-list'),
   petCategories: document.querySelector('.js-pet-categories'),
+  showDetailsBtn: document.querySelector('.js-more-info'),
 };
 
 refs.showMoreBtn.disabled = true;

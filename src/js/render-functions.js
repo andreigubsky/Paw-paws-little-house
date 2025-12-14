@@ -91,7 +91,7 @@ export function createTemplatePet(pet) {
           ${pet.shortDescription}
         </p>
       
-        <button class="pet-card__button js-more-info">
+        <button class="pet-card__button js-more-info" data-id="${pet._id}">
           Дізнатись більше
         </button>
     </div>
