@@ -10,15 +10,7 @@ const options = {
     mode: 'no-cors',
   },
 };
-  method: 'GET',
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-    'X-Custom-Header': 'custom value',
-    mode: 'no-cors',
-  },
-};
-
+  
 export async function getAnimalsByQuery(categoryId, page, limit) {
   try {
     const requestURL = `${url}/?categoryId=${categoryId}&page=${page}&limit=${limit}`;
