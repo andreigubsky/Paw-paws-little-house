@@ -38,7 +38,8 @@
 
   font-weight: 400;
   font-size: 14px;
-
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0);
   /* line-height: 21px; */
   line-height: 1.5;
   color: #02060a;
@@ -119,8 +120,29 @@
   margin-bottom: 4px;
 }
 .pet-card__groups {
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: 4px;
+  gap: 4px;
+  height: 63px;
 }
+.pet-card__group {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+
+  line-height: 1.5;
+  color: #02060a;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 100px;
+  padding-block: 4px;
+  padding-inline: 10px;
+  color: #02060a;
+  height: 26px;
+
+  background: rgba(2, 6, 10, 0.05);
+}
+
 .pet-card__meta {
   display: flex;
   gap: 16px;
@@ -166,10 +188,9 @@
 }
 
 .is-active {
-  border: 1px solid rgba(255, 255, 255, 0);
   border-radius: 100px;
-  padding: 10px 16px;
-  background: #c3b49d;
+
+  background: #eee9e3;
 }
 
 .pet-show-more-btn:disabled {
@@ -273,7 +294,7 @@
     font-size: 24px;
   }
 
-  .pet-card__groups {
+  .pet-card__group {
     font-size: 12px;
   }
 
