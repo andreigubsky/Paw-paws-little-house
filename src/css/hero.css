@@ -1,1 +1,80 @@
 /* hero.css */
+
+.hero-container {
+    background-image: url('../img/hero/hero-ima-dog-and-cat.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container::before{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    90deg,
+    rgba(62, 54, 38, 0.74) 0%,
+    rgba(62, 54, 38, 0) 70%
+  );
+    z-index: 1;
+}
+
+.hero-content-container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 128px;
+    max-width: 550px;
+}
+
+.hero-description-container {
+    height: 279px;
+    color: #FFFFFF;
+}
+
+.hero-description-title {
+    font-size: 48px;
+    line-height: 120%;
+    font-weight: 700;
+    font-style: bold;
+    letter-spacing: -1%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hero-description-text {
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 400;
+    letter-spacing: 0;
+    margin-top: 24px;
+    width: 460px;
+}
+
+.hero-button {
+    background-color: #88765C;
+    border: none;
+    border-radius: 6px;
+    width: 189px;
+    height: 48px;
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background-color 0.25s ease;
+}
+
+.hero-button:hover,
+.hero-button:focus{
+    background-color: #C3B49D;
+    border: #02060A 1px solid;
+    color: #02060A;
+}
