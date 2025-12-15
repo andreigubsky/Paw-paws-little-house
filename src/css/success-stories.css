@@ -13,7 +13,6 @@
     }
 }
 
-/* --- Заголовки --- */
 .reviews-title {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 700;
@@ -49,7 +48,6 @@
     }
 }
 
-/* --- Слайдер --- */
 .reviews-slider {
     width: 100%;
     padding-bottom: 70px !important;
@@ -57,36 +55,30 @@
     overflow: hidden;
 }
 
-/* --- Картка --- */
 .review-card {
     display: flex;
     flex-direction: column;
     height: auto;
 }
 
-/* --- ЗІРОЧКИ (СТИЛІ ДЛЯ RATY.JS) --- */
-
 .review-rating {
     margin-bottom: 16px;
     display: flex;
 }
 
-.raty-rating {
-    /* ЗАБЕЗПЕЧУЄМО ГОРИЗОНТАЛЬНЕ ПОЛОЖЕННЯ */
+.rating-container {
     display: flex;
     align-items: center;
+    gap: 2px;
 }
 
-.raty-rating img {
+.icon-star {
+    display: block;
     width: 16px;
     height: 16px;
-    margin-right: 2px;
-
-    /* ФІЛЬТР ДЛЯ ЧОРНОГО КОЛЬОРУ */
-    filter: grayscale(100%) brightness(0);
+    filter: brightness(0) saturate(100%);
 }
 
-/* --- Текст --- */
 .review-text {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
@@ -104,7 +96,6 @@
     color: #111;
 }
 
-/* --- Кнопки --- */
 .reviews-btn {
     position: absolute;
     bottom: 0;
@@ -126,12 +117,10 @@
     display: block;
 }
 
-/* Ховер */
 .reviews-btn:hover:not(:disabled) {
     border-color: #FFC107;
 }
 
-/* --- Позиціювання кнопок --- */
 .reviews-btn-next {
     right: 0;
 }

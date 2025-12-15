@@ -10,13 +10,10 @@ import './js/render-functions';
 import axios from 'axios';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import Raty from 'raty-js';
+import { renderStars } from './js/render-functions.js';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import starOn from './img/raty/star-on.png';
-import starOff from './img/raty/star-off.png';
-import starHalf from './img/raty/star-half.png';
 
 const REVIEWS_URL = 'https://paw-hut.b.goit.study/api/feedbacks';
 const reviewsContainer = document.getElementById('feedbacks-list');
@@ -24,9 +21,9 @@ const reviewsContainer = document.getElementById('feedbacks-list');
 async function fetchReviews() {
   try {
     const response = await axios.get(REVIEWS_URL);
-    // Беремо дані з feedbacks
     return response.data.feedbacks || [];
   } catch (error) {
+    console.error('Error fetching reviews:', error);
     return [];
   }
 }
@@ -39,7 +36,7 @@ function createReviewCardMarkup(review) {
   return `
     <div class="swiper-slide review-card">
       <div class="review-rating">
-         <div class="raty-rating" data-score="${rating}"></div>
+         <div class="rating-container" data-score="${rating}"></div>
       </div>
       
       <p class="review-text">${comment}</p>
@@ -58,23 +55,15 @@ async function initReviewsSection() {
   if (!reviews.length) return;
 
   reviewsContainer.innerHTML = reviews.map(createReviewCardMarkup).join('');
-
-  const ratingElements = document.querySelectorAll('.raty-rating');
+  const ratingElements = document.querySelectorAll('.rating-container');
 
   ratingElements.forEach(element => {
-    const score = element.dataset.score;
-
-    new Raty(element, {
-      starType: 'img',
-      starOn: starOn,
-      starOff: starOff,
-      starHalf: starHalf,
-      half: true,
-      readOnly: true,
-      score: score,
-      space: false,
-    }).init();
+    const score = Number(element.dataset.score) || 0;
+    console.log('Рейтинг відгуку з API:', score);
+    renderStars(element, 4.5, 5);
+    renderStars(element, score, 5);
   });
+
   new Swiper('.reviews-slider', {
     modules: [Navigation, Pagination],
     speed: 500,
