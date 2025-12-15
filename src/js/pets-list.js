@@ -150,3 +150,42 @@ function scrollPage() {
 }
 
 //!================================================
+refs.pagination.addEventListener('click', async e => {
+  const btn = e.target.closest('button');
+  if (!btn) return;
+
+  if (btn.hasAttribute('disabled')) return;
+
+  let nextPage = page;
+
+  if (btn.dataset.page) {
+    nextPage = Number(btn.dataset.page);
+  }
+
+  if (btn.dataset.nav === 'prev') nextPage = page - 1;
+  if (btn.dataset.nav === 'next') nextPage = page + 1;
+
+  if (!Number.isFinite(nextPage) || nextPage < 1 || nextPage > totalPages)
+    return;
+  if (nextPage === page) return;
+
+  page = nextPage;
+  perPage = getPerPage();
+
+  const response =
+    query === 'all'
+      ? await getAnimals(page, perPage)
+      : await getAnimalsByQuery(query, page, perPage);
+
+  refs.petList.innerHTML = createTemplatePets(response.animals);
+
+  totalPages = Math.ceil(response.totalItems / response.limit);
+
+  renderPagination({
+    container: refs.pagination,
+    current: page,
+    total: totalPages,
+  });
+
+  scrollToCategories(refs.petCategories);
+});
