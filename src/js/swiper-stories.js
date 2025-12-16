@@ -5,7 +5,6 @@ import { renderStars } from '../js/render-functions';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../css/swiper-stories.css';
 
 const REVIEWS_URL = 'https://paw-hut.b.goit.study/api/feedbacks';
 const reviewsContainer = document.getElementById('feedbacks-list');
