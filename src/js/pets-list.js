@@ -5,12 +5,14 @@ import {
   createTemplatePets,
 } from './render-functions';
 
+// ================== GLOBAL STORAGE ==================
+export const allAnimals = []; // ← ГЛОБАЛЬНИЙ МАСИВ
+
 //!================================================
 const refs = {
   showMoreBtn: document.querySelector('.js-pet-show-more-btn'),
   petList: document.querySelector('.js-pet-list'),
   petCategories: document.querySelector('.js-pet-categories'),
-  showDetailsBtn: document.querySelector('.js-more-info'),
 };
 
 refs.showMoreBtn.disabled = true;
@@ -24,23 +26,29 @@ let perPage = getPerPage();
 let query = 'all';
 //!================================================
 
+// ----------- LOAD CATEGORIES -----------
 document.addEventListener('DOMContentLoaded', async () => {
   const response = await getCategories();
   perPage = getPerPage();
-  const markup = createTemplateCategories(response.sort().reverse());
-  refs.petCategories.innerHTML = markup;
+  refs.petCategories.innerHTML =
+    createTemplateCategories(response.sort().reverse());
 
   const allBtn = refs.petCategories.querySelector('[data-category="all"]');
   allBtn.closest('.pet-category-item').classList.add('is-active');
 });
 
-document.addEventListener('DOMContentLoaded', async e => {
+// ----------- FIRST LOAD PETS -----------
+document.addEventListener('DOMContentLoaded', async () => {
   const response = await getAnimals(page, perPage);
-  const markup = createTemplatePets(response.animals);
-  refs.petList.innerHTML = markup;
+
+  allAnimals.length = 0;                 // 🔴 очистка
+  allAnimals.push(...response.animals);  // ✅ зберігаємо
+
+  refs.petList.innerHTML = createTemplatePets(response.animals);
   refs.showMoreBtn.disabled = response.animals.length < perPage;
 });
 
+// ----------- CHANGE CATEGORY -----------
 refs.petCategories.addEventListener('click', async e => {
   if (e.target.nodeName !== 'BUTTON') return;
 
@@ -53,7 +61,6 @@ refs.petCategories.addEventListener('click', async e => {
   query = e.target.dataset.category;
   page = 1;
   perPage = getPerPage();
-
   refs.showMoreBtn.disabled = false;
 
   let response;
@@ -64,13 +71,14 @@ refs.petCategories.addEventListener('click', async e => {
     response = await getAnimalsByQuery(query, page, perPage);
   }
 
-  refs.petList.innerHTML = createTemplatePets(response.animals);
+  allAnimals.length = 0;                 // 🔴 очистка
+  allAnimals.push(...response.animals);  // ✅ нові дані
 
+  refs.petList.innerHTML = createTemplatePets(response.animals);
   refs.showMoreBtn.disabled = response.animals.length < perPage;
 });
 
-//!================================================
-
+// ----------- SHOW MORE -----------
 refs.showMoreBtn.addEventListener('click', async () => {
   page += 1;
   perPage = getPerPage();
@@ -83,6 +91,8 @@ refs.showMoreBtn.addEventListener('click', async () => {
     response = await getAnimalsByQuery(query, page, perPage);
   }
 
+  allAnimals.push(...response.animals); // ✅ ДОДАЄМО В МАСИВ
+
   refs.petList.insertAdjacentHTML(
     'beforeend',
     createTemplatePets(response.animals)
@@ -94,18 +104,16 @@ refs.showMoreBtn.addEventListener('click', async () => {
 
   scrollPage();
 });
+
 //!================================================
 function scrollPage() {
   const elem = document.querySelector('.js-pet-list > *');
   if (!elem) return;
 
-  const rect = elem.getBoundingClientRect();
-  const heightOfElem = rect.height * 2;
+  const heightOfElem = elem.getBoundingClientRect().height * 2;
 
   window.scrollBy({
     top: heightOfElem,
     behavior: 'smooth',
   });
 }
-
-//!================================================

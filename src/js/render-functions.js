@@ -103,3 +103,46 @@ export function createTemplatePets(pets) {
   return pets.map(createTemplatePet).join('');
 }
 //!================================================
+export function createModalTemplate(pet) {
+  return `
+    <div class="pet-modal">
+      <button
+        type="button"
+        class="pet-modal-close js-modal-close"
+        aria-label="Close modal"
+      >
+        ×
+      </button>
+
+      <div class="pet-modal-content">
+        <div class="pet-modal-image">
+          <img src="${pet.image}" alt="${pet.name}" />
+        </div>
+
+        <div class="pet-modal-info">
+          <p class="pet-modal-species">${pet.species}</p>
+
+          <h2 class="pet-modal-name">${pet.name}</h2>
+
+          <p class="pet-modal-meta">
+            <span>${pet.age}</span>
+            <span>${pet.gender}</span>
+          </p>
+
+          <h3>Опис:</h3>
+          <p>${pet.description}</p>
+
+          <h3>Здоровʼя:</h3>
+          <p>${pet.healthStatus}</p>
+
+          <h3>Поведінка:</h3>
+          <p>${pet.behavior}</p>
+
+          <button class="take-home js-takehome-btn">
+            Взяти додому
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
