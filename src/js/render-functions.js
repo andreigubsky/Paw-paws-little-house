@@ -103,9 +103,9 @@ export function createTemplatePets(pets) {
   return pets.map(createTemplatePet).join('');
 }
 //!================================================
-import fullStar from '/img/SVG/star-filled.svg';
-import halfStar from '/img/SVG/star-half.svg';
-import emptyStar from '/img/SVG/star-outline.svg';
+import fullStar from '../img/SVG/star-filled.svg';
+import halfStar from '../img/SVG/star-half.svg';
+import emptyStar from '../img/SVG/star-outline.svg';
 
 export function renderStars(container, score, maxStars = 5) {
   container.innerHTML = '';

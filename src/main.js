@@ -23,7 +23,7 @@ const reviewsContainer = document.getElementById('feedbacks-list');
 async function fetchReviews() {
   try {
     const response = await axios.get(REVIEWS_URL);
-    return response.data.feedbacks || [];
+    return response.data.feedbacks || response.data || [];
   } catch (error) {
     return [];
   }
@@ -37,7 +37,7 @@ function createReviewCardMarkup(review) {
   return `
     <div class="swiper-slide review-card">
       <div class="review-rating">
-         <div class="rating-container" data-score="${rating}"></div>
+          <div class="rating-container" data-score="${rating}"></div>
       </div>
       
       <p class="review-text">${comment}</p>
@@ -53,15 +53,15 @@ async function initReviewsSection() {
   if (!reviewsContainer) return;
 
   const reviews = await fetchReviews();
+
   if (!reviews.length) return;
 
   reviewsContainer.innerHTML = reviews.map(createReviewCardMarkup).join('');
+
   const ratingElements = document.querySelectorAll('.rating-container');
 
   ratingElements.forEach(element => {
     const score = Number(element.dataset.score) || 0;
-    console.log('Рейтинг відгуку з API:', score);
-    renderStars(element, 4.5, 5);
     renderStars(element, score, 5);
   });
 
@@ -69,6 +69,8 @@ async function initReviewsSection() {
     modules: [Navigation, Pagination],
     speed: 500,
     spaceBetween: 16,
+    slidesPerView: 1,
+    grabCursor: true,
     breakpoints: {
       320: { slidesPerView: 1, spaceBetween: 16 },
       768: { slidesPerView: 2, spaceBetween: 16 },
