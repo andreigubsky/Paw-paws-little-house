@@ -91,7 +91,8 @@
 }
 body {
   font-family: var(--font-family);
-  color: var(--color-scheme-1-text);
+  color: var(--color-mariner-lightest);
+  
   background-color: var(--color-scheme-1-background);
 }
 
