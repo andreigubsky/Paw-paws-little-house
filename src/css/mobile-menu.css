@@ -1,1 +1,68 @@
 /* mobile-menu.css */
+body{
+  margin: 0;
+}
+.location {
+  display: none;
+  flex-direction: column;
+  background-color: #F6F4F1;
+  width: 100vw;
+  height: 100vh;
+
+}
+.logo-image{
+  padding-top: 7.36px;
+  padding-bottom: 9.26px;
+}
+.title-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 24px;
+  padding-top: 8px;
+}
+.menu-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  list-style-type: none;
+  padding-top: 24px; ;
+  margin: 0;
+  padding-inline-start: 0;
+}
+.menu-link{
+  text-decoration: none;
+  color: #02060A;
+  font-family: 'IBM ';
+}
+.menu-container{
+  margin: 0 auto;
+  flex-direction: column;
+  display: flex;
+  gap: 64px;
+  padding-top: 16px;
+
+}
+.take-a-friend{
+  background-color: #88765C;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  line-height: 150%;
+  width: 325px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.is-visible{
+  display: flex;
+}
+@media (min-width: 768px) {
+  .menu-items-list{
+    align-items: center;
+  }
+}
+.close-btn{
+  cursor: pointer;
+}
