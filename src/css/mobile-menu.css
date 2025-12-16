@@ -10,7 +10,7 @@ body{
   position: absolute;
   z-index: 999;
   flex-direction: column;
-  background-color: #F6F4F1;
+  background-color: var( --color-mariner-lightest);
   width: 100vw;
   height: 100vh;
 
@@ -50,7 +50,7 @@ body{
 
 }
 .take-a-friend{
-  background-color: #88765C;
+  background-color: var(--color-mariner-dark);
   border: none;
   border-radius: 8px;
   color: white;
