@@ -1,28 +1,36 @@
 <!-- header.html -->
-<link rel="stylesheet" href="../css/header.css">
 <header class="header">
-  <div class="header-container">
-    <nav class="nav">
-      <a href="../index.html">
-        <svg class="logo-image">
-          <use href="./img/sprite.svg#icon-logo"></use>
+  <div class="container">
+    <div class="wrapper-navigation">
+      <a href="/index.html" class="logo-image">
+        <svg>
+          <use href="/img/sprite.svg#icon-logo"></use>
         </svg>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item"><a href="#pet-list-section" class="nav-link">Знайди друга</a></li>
-        <li class="nav-item"><a href="" class="nav-link">Про нас</a></li>
-        <li class="nav-item"><a href="#faq-section" class="nav-link">Часті запитання</a></li>
-        <li class="nav-item"><a href="succes-stories" class="nav-link">Історії успіху</a></li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#pet-list-section" class="nav-link">Знайди друга</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-us-section" class="nav-link">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#faq-section" class="nav-link">Часті запитання</a>
+          </li>
+          <li class="nav-item">
+            <a href="#success-stories-section" class="nav-link"
+              >Історії успіху</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
     <button class="burger-btn">
-      <svg class="burger-icon">
-        <use href="./img/sprite.svg#burger-menu-icon"></use>
+      <svg class="icon-burger">
+        <use href="/img/sprite.svg#icon-burger-menu"></use>
       </svg>
     </button>
-    <svg class="close-btn">
-      <use href="./img/sprite.svg#close-menu-btn-icon"></use>
-      </svg>
     <button class="take-a-friend-header">Взяти друга</button>
   </div>
 </header>
