@@ -1,16 +1,25 @@
 <!-- mobile-menu.html -->
-  <section class="mobile-menu ">
-    <svg class="close-btn">
+<div class="mobile-menu" id="mobilemenu" data-menu>
+  <button class="close-btn" type="button" data-menu-close>
+    <svg class="icon-menu-close" width="24" height="24">
       <use href="/img/sprite.svg#icon-close-btn"></use>
     </svg>
-    <div class="menu-container">
-      <ul class="menu-items-list">
-        <li class="menu-item"><a href="#" class="menu-link">Знайди друга</a></li>
-        <li class="menu-item"><a href="#about-us" class="menu-link">Про нас</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Часті запитання</a></li>
-        <li class="menu-item"><a href="#" class="menu-link">Історії успіху</a></li>
-      </ul>
-      <button class="take-a-friend">Взяти друга</button>
-    </div>
-  </section>
-</section>
+  </button>
+  <nav class="menu-content">
+    <ul class="menu-nav-list">
+      <li class="menu-nav-list-item">
+        <a href="#pet-list-section">Знайди друга</a>
+      </li>
+      <li class="menu-nav-list-item">
+        <a href="#about-us-section">Про нас</a>
+      </li>
+      <li class="menu-nav-list-item">
+        <a href="#faq-section">Часті запитання</a>
+      </li>
+      <li class="menu-nav-list-item">
+        <a href="#success-stories-section">Історії успіху</a>
+      </li>
+    </ul>
+    <button class="take-a-friend">Взяти друга</button>
+  </nav>
+</div>

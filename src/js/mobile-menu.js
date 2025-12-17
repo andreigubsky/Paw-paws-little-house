@@ -1,24 +1,21 @@
-const mobileMenu = document.querySelector('.mobile-menu');
-const menuList = document.querySelector('.menu-items-list');
-const closeBtn = document.querySelector('.close-btn');
-const burgerBtn = document.querySelector('.burger-btn');
+const refsmenu = {
+  openMenuBtn: document.querySelector('[data-menu-open]'),
+  closeMenuBtn: document.querySelector('[data-menu-close]'),
+  menu: document.querySelector('[data-menu]'),
+};
+refsmenu.openMenuBtn.addEventListener('click', toggleMenu);
+refsmenu.closeMenuBtn.addEventListener('click', toggleMenu);
+function toggleMenu() {
+  refsmenu.menu.classList.toggle('is-open');
+}
 
-burgerBtn.addEventListener('click', () => {
-  mobileMenu.classList.add('is-visible');
-  burgerBtn.classList.add('is-hidden');
-  closeBtn.classList.add('is-visible');
-});
-
-closeBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('is-visible');
-  burgerBtn.classList.remove('is-hidden');
-  closeBtn.classList.remove('is-visible');
-});
-
-menuList.addEventListener('click', (target) => {
-  if (target.target.nodeName === 'A') {
-    mobileMenu.classList.remove('is-visible');
-    burgerBtn.classList.remove('is-hidden');
-    closeBtn.classList.remove('is-visible');
-  }
-});
+const refs = {
+  openModalBtn: document.querySelector('[data-modal-open]'),
+  closeModalBtn: document.querySelector('[data-modal-close]'),
+  modal: document.querySelector('[data-modal]'),
+};
+refs.openModalBtn.addEventListener('click', toggleModal);
+refs.closeModalBtn.addEventListener('click', toggleModal);
+function toggleModal() {
+  refs.modal.classList.toggle('is-open');
+}
