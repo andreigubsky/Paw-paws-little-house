@@ -142,32 +142,7 @@
 
   /* ====================================== */
 
-  @media (min-width: 768px) and (max-width: 1439px) {
-    .pet-modal-info {
-      display: flex;
-      flex-direction: column;
-    }
 
-    .pet-modal-info>* {
-      order: 2;
-    }
-
-    .pet-modal-species,
-    .pet-modal-name,
-    .pet-modal-meta {
-      order: 1;
-    }
-
-    .take-home {
-      order: 2;
-      margin: 0 auto;
-    }
-
-    .pet-modal-info h3,
-    .pet-modal-info h3+p {
-      order: 3;
-    }
-  }
 
   /* ============================ */
 
@@ -181,6 +156,33 @@
 
   .pet-modal-name {
     font-size: 28px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+  .pet-modal-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pet-modal-info>* {
+    order: 2;
+  }
+
+  .pet-modal-species,
+  .pet-modal-name,
+  .pet-modal-meta {
+    order: 1;
+  }
+
+  .take-home {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .pet-modal-info h3,
+  .pet-modal-info h3+p {
+    order: 3;
   }
 }
 
