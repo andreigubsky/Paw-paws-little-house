@@ -1,1 +1,133 @@
 /* faq.css */
+/* Styles for Mobile devices */
+.faq-section {
+  background-color: var(--color-scheme-1-background);
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.faq-header {
+  font-family: var(--second-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 120%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: var(--color-scheme-1-text);
+  margin-bottom: 40px;
+}
+
+.faq-list .faq-list-item .faq-open-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.faq-close-div {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.faq-list {
+  background-color: var();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.faq-list .faq-list-item {
+  background-color: var(--color-scheme-1-foreground);
+  display: flex;
+  flex-direction: column;
+  border: 0px solid var(--color-scheme-1-border);
+  border-radius: 8px;
+}
+
+.faq-list-question {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+  max-width: 239px;
+}
+
+.ac-trigger::after,
+.ac-trigger::before {
+  content: none !important;
+  /* Насильно прибираємо вміст */
+  display: none !important;
+  /* Гарантовано ховаємо елемент */
+}
+
+.faq-button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.faq-list-close {
+  padding-left: 24px;
+}
+
+ul.faq-list-close {
+  list-style-type: disc;
+}
+.faq-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--color-scheme-1-text);
+  padding-bottom: 14px;
+}
+
+.faq-text-last {
+  padding-bottom: 24px;
+}
+
+/* Styles for Tablet devices */
+@media only screen and (min-width: 768px) {
+  .faq-header {
+    margin-bottom: 80px;
+  }
+  .faq-open-div {
+    width: 704px;
+  }
+  .faq-close-div {
+    width: 704px;
+  }
+  .faq-list-question {
+    max-width: 608px;
+  }
+}
+
+/* Styles for Desktop devices */
+@media only screen and (min-width: 1440px) {
+  .faq-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .faq-open-div {
+    width: 864px;
+  }
+  .faq-close-div {
+    width: 864px;
+  }
+  .faq-list-question {
+    max-width: 768px;
+    font-size: 18px;
+  }
+  .faq-text {
+    font-size: 16px;
+  }
+  .faq-header {
+    font-size: 48px;
+  }
+}

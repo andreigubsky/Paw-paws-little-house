@@ -1,4 +1,8 @@
 /* pet-list.css */
+.pet-list-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
 .pet-title {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
