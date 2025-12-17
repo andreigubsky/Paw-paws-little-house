@@ -54,7 +54,7 @@ async function initReviewsSection() {
     renderStars(element, score, 5);
   });
 
-  new Swiper('.reviews-slider', {
+  new Swiper('.reviews-swiper', {
     modules: [Navigation, Pagination],
     speed: 500,
     spaceBetween: 16,
@@ -62,14 +62,14 @@ async function initReviewsSection() {
     grabCursor: true,
 
     pagination: {
-      el: '.reviews-pagination',
+      el: '.reviews-slider .swiper-pagination',
       clickable: true,
       dynamicBullets: true,
     },
 
     navigation: {
-      nextEl: '.reviews-btn-next',
-      prevEl: '.reviews-btn-prev',
+      nextEl: '.reviews-slider .swiper-button-next',
+      prevEl: '.reviews-slider .swiper-button-prev',
     },
 
     breakpoints: {
@@ -80,4 +80,4 @@ async function initReviewsSection() {
   });
 }
 
-initReviewsSection();
+document.addEventListener('DOMContentLoaded', initReviewsSection);
