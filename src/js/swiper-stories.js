@@ -65,6 +65,7 @@ async function initReviewsSection() {
       el: '.reviews-slider .swiper-pagination',
       clickable: true,
       dynamicBullets: true,
+      dynamicMainBullets: 1,
     },
 
     navigation: {
