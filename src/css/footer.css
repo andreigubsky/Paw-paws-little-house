@@ -48,7 +48,8 @@
   .footer-anchor-item {
     font-size: 14px;
   }
-  .footer-anchor-item:hover, .footer-anchor-item:focus {
+  .footer-anchor-item:hover,
+  .footer-anchor-item:focus {
     cursor: pointer;
     color: var(--color-neutral-darkest);
     text-decoration: underline;
@@ -70,13 +71,14 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .footer-social-list:hover, .footer-social-list:focus {
+  .footer-social-list:hover,
+  .footer-social-list:focus {
     cursor: pointer;
   }
 }
 
 /* Copyrights */
-.separator{
+.separator {
   height: 0px;
   margin-top: 80px;
   border: 1px var(--color-scheme-1-border) solid;
