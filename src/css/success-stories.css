@@ -1,19 +1,21 @@
 /* --- Success Stories Section --- */
 /* #region Card */
 
-.reviews-section .container {
-  padding: 64px 20px;
-  min-width: 320px;
-  max-width: 375px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
+
 
 @media screen and (min-width: 375px) {
   .reviews-section .container {
     width: 100%;
     min-width: 280px;
   }
+}
+
+.reviews-section .container {
+  padding: 64px 20px;
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .reviews-title {
@@ -42,11 +44,6 @@
   }
 }
 
-.reviews-slider {
-  /* width: 100%; */
-  /* position: relative; */
-}
-
 .review-card {
   display: flex;
   flex-direction: row;
@@ -59,7 +56,6 @@
 }
 
 .review-rating {
-  margin-bottom: 20px;
   display: flex;
   width: 100%;
   justify-content: flex-start;
@@ -75,9 +71,9 @@
 
 .icon-star {
   display: block;
-  width: 20px !important;
-  height: 19px !important;
-  max-width: 20px !important;
+  width: 20px;
+  height: 19px;
+  max-width: 20px ;
   flex-shrink: 0;
   object-fit: contain;
   filter: brightness(0);
@@ -87,7 +83,7 @@
   color: var(--color-scheme-1-text);
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   width: 100%;
   margin-bottom: 32px;
@@ -99,7 +95,6 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 1.5;
-  margin: 0;
   text-align: left;
 }
 
@@ -168,31 +163,36 @@
   --swiper-pagination-bullet-horizontal-gap: 0px;
 }
 
-@media only screen and (max-width: 767px) {
-  .reviews-slider-controls .swiper-pagination-bullet {
-    width: 4px;
-    height: 4px;
-    transition: 200ms ease;
+ @media only screen and (min-width: 768px) {
+  .reviews-slider .swiper-pagination-bullet {
+      width: 4px;
+      height: 4px;
+      background-color: var(--color-scheme-1-text);
+      opacity: 0.5;
+      transition: 200ms ease;
+      flex-shrink: 0;
+      margin: 0 4px !important;
+    }
+  
+    .reviews-slider .swiper-pagination-bullet-active+.swiper-pagination-bullet {
+      width: 6px;
+      height: 6px;
+      opacity: 0.8;
+    }
+  
+    .reviews-slider .swiper-pagination-bullet:has(+ .swiper-pagination-bullet-active) {
+      width: 6px;
+      height: 6px;
+      opacity: 0.8;
+    }
+  
+    .reviews-slider .swiper-pagination-bullet-active {
+      width: 8px;
+      height: 8px;
+      background: var(--color-scheme-1-text);
+      opacity: 1;
+    }
   }
-
-  .reviews-slider-controls .swiper-pagination-bullet-active+.swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-  }
-
-
-  .reviews-slider-controls .swiper-pagination-bullet:has(+ .swiper-pagination-bullet-active) {
-    width: 6px;
-    height: 6px;
-  }
-
-  .reviews-slider-controls .swiper-pagination-bullet-active {
-    width: 8px;
-    height: 8px;
-
-    background: var(--color-scheme-1-text);
-  }
-}
 
 /* ===============БУЛЕТИ-кінець=============== */
 
@@ -250,77 +250,60 @@
   color: var(--color-scheme-1-text);
 }
 
+@media screen and (min-width: 768px) {
 
-@media only screen and (min-width: 768px) {
-
-  .reviews-slider {
-    position: relative;
+  .reviews-section .container {
+    max-width: 768px;
+    padding: 64px 32px;
   }
 
-  .swiper {
+  .reviews-subtitle {
     max-width: 704px;
-    height: 404px;
-}
-.swiper-wrapper {
-        height: 404px;
-    }
-    .swiper-slide {
-        position: relative;
-    }
+    margin: 0 auto 64px auto;
+  }
+
+  .reviews-slider .swiper {
+    max-width: 704px;
+    height: auto;
+    margin: 0 auto 24px auto;
+  }
+
+  .reviews-slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 704px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .reviews-slider .swiper-pagination {
+    position: static;
+    margin: 0;
+    width: 60px !important;
+    gap: 2px;
+    display: flex;
+    justify-content: flex-start;
+    transform: none !important;
+    overflow: hidden;
+  }
+
+  .reviews-slider .swiper-button-wrapper {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+  }
 
   .reviews-slider .swiper-button-next,
   .reviews-slider .swiper-button-prev {
-    pointer-events: auto;
-    top: calc(404px / 2);
-    border: 1px solid var(--color-mariner-light);
-    border-radius: 8px;
-    padding: 12px;
-    width: 48px;
-    height: 48px;
-    background: var(--color-scheme-1-foreground);
-  }
-
-
-  .reviews-slider-controls {
     position: static;
-    max-width: 704px;
-    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
     margin: 0;
-    padding: 0 8px;
-    pointer-events: auto;
-
+    transform: none;
   }
-
-  .reviews-slider-controls .swiper-pagination {
-    position: static;
-    justify-content: center;
-    margin-top: 24px;
-    padding: 10px;
-    gap: 9px;
-  }
-
-
-
-  .reviews-slider .swiper-button-prev {
-    left: -24px;
-  }
-
-  .reviews-slider .swiper-button-next {
-    right: -24px;
-  }
-
-  .reviews-slider .swiper-pagination-bullet {
-    transition: 200ms ease;
-  }
-
-  .reviews-slider .swiper-pagination-bullet-active {
-    width: 8px;
-    height: 8px;
-    background: var(--color-scheme-1-text);
-    border: 1px dashed blue;
-  }
-
-
 }
 
 @media only screen and (min-width: 1440px) {
