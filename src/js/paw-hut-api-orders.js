@@ -1,5 +1,6 @@
 // paw-hut-api-orders.js
 import axios from 'axios';
+import iziToast from 'izitoast';
 
 const url = 'https://paw-hut.b.goit.study/api/orders';
 
@@ -12,9 +13,10 @@ export async function sendOrder(data) {
         'X-Custom-Header': 'custom value',
       },
     });
-
+    iziToast.show("Success send");
     return response.data;
   } catch (error) {
+    iziToast.show("Error send");
     console.error('Помилка запиту:', error.response?.data || error.message);
     throw error;
   }

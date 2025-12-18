@@ -12,6 +12,7 @@
   opacity: 0;
   pointer-events: none;
   transition: transform 0.5s ease, opacity 0.5s ease;
+  overflow-y: scroll;
 }
 
 .mobile-menu.is-open {

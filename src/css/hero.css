@@ -1,9 +1,5 @@
 /* hero.css */
 
-html {
-  scroll-behavior: smooth;
-}
-
 :root {
   --color-hero-overlay: rgba(62, 54, 38, 0.74);
   --color-hero-overlay-transparent: rgba(62, 54, 38, 0);
