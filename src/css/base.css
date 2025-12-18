@@ -89,6 +89,9 @@
   --color-scheme-2-foreground: var(--color-mariner-dark);
   --color-red: #ae0000;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-family);
   color: var(--color-scheme-1-text);

@@ -12,10 +12,25 @@ document.addEventListener('DOMContentLoaded', () => {
   if (refsmenu.closeMenuBtn && refsmenu.menu) {
     refsmenu.closeMenuBtn.addEventListener('click', toggleMenu);
   }
+  
+  function onEscPress(e) {
+    if (e.key === 'Escape') {
+      refsmenu.menu.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+      document.removeEventListener('keydown', onEscPress);
+    }
+  }
 
   function toggleMenu() {
+    const isOpen = refsmenu.menu.classList.contains('is-open');
     refsmenu.menu.classList.toggle('is-open');
     document.body.classList.toggle('no-scroll');
+
+    if (!isOpen) {
+      document.addEventListener('keydown', onEscPress);
+    } else {
+      document.removeEventListener('keydown', onEscPress);
+    }
   }
 
 
@@ -23,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.target.tagName === 'A') {
       refsmenu.menu.classList.remove('is-open');
       document.body.classList.remove('no-scroll');
+      document.removeEventListener('keydown', onEscPress);
     }
   });
 
@@ -44,4 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleModal() {
     refs.modal.classList.toggle('is-open');
   }
+
 });
+
+
+

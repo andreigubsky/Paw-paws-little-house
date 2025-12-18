@@ -16,7 +16,6 @@
 
 .pet-text {
   font-family: 'IBM Plex Sans', sans-serif;
-
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -28,7 +27,7 @@
 .pet-categories {
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
@@ -57,7 +56,6 @@
 
 .pet-show-more-btn {
   font-family: 'IBM Plex Sans', sans-serif;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
@@ -209,8 +207,8 @@
   }
 
   .pet-categories {
-    width: 579px;
-    margin: 0 auto;
+    /* width: 579px; */
+    /* margin: 0 auto; */
   }
 
   .pet-show-more-btn {
@@ -249,15 +247,16 @@
 
   .pet-categories {
     margin-bottom: 40px;
-    width: 975px;
+    /* width: 975px; */
   }
 
   .pet-list {
     margin-bottom: 40px;
+    gap: 32px;
   }
 
   .pet-card {
-    width: calc((100% - 32px) / 3);
+    width: calc((100% - 64px) / 3);
   }
 
   .pet-card__species {

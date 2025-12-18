@@ -6,10 +6,10 @@ new Accordion('.accordion-container', {
     showMultiple: false,
     onOpen: (currentElement) => {
         const icon = currentElement.querySelector(".faq-icon-use");
-        icon.href.baseVal = "/img/sprite.svg#icon-close";
+        icon.href.baseVal = "./img/sprite.svg#icon-close";
     },
     onClose: (currentElement) => {
         const icon = currentElement.querySelector(".faq-icon-use");
-        icon.href.baseVal = "/img/sprite.svg#icon-add";
+        icon.href.baseVal = "./img/sprite.svg#icon-add";
     }
 }); 

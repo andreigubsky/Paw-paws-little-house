@@ -1,5 +1,6 @@
 // paw-hut-api-categories.js
 import axios from 'axios';
+import iziToast from 'izitoast';
 
 const url = 'https://paw-hut.b.goit.study/api/categories';
 const options = {
@@ -19,8 +20,10 @@ export async function getCategories() {
     if (!response.data) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
+    iziToast.show("Success send");
     return response.data;
   } catch (error) {
+    iziToast.show("Error send");
     console.error(error);
     throw error;
   }
