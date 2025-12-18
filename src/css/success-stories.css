@@ -3,6 +3,8 @@
   max-width: 375px;
   margin: 0 auto;
   box-sizing: border-box;
+  padding-bottom: 64px;
+  padding-top: 64px;
 }
 
 .reviews-title {
