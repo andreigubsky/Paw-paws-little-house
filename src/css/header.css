@@ -27,9 +27,12 @@
   display: none;
 }
 
+.burger-btn{
+  padding: 18px 15px;
+}
 .icon-burger {
-  width: 48px;
-  height: 48px;
+  width: 19px;
+  height: 13px;
 }
 
 .take-a-friend-header {
