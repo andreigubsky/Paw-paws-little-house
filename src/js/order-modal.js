@@ -1,5 +1,6 @@
 // order-modal.js
 import '../css/order-modal.css';
+import { notificationError, notificationSuccess } from './notifications';
 import { sendOrder } from './paw-hut-api-orders';
 
 const modalLayer = document.querySelector('.js-modal-order-overlay');
@@ -59,16 +60,21 @@ if (modalLayer && modalCloseBtn && form) {
     if (!name) {
       showError(nameInput, 'Введіть імʼя');
       hasError = true;
+      notificationError(`Введіть імʼя`);
     }
 
     if (!/^\d{12}$/.test(phone)) {
       showError(phoneInput, 'Формат: 380XXXXXXXXX');
       hasError = true;
+      notificationError(
+        `Неправильна кількість цифер. Перевірте введений номер.`
+      );
     }
 
     if (!comment) {
       showError(commentInput, 'Напишіть коментар');
       hasError = true;
+      notificationError(`Будь ласка, залиште коментар`);
     }
 
     if (hasError || !selectedPetId) return;
@@ -84,8 +90,12 @@ if (modalLayer && modalCloseBtn && form) {
 
     try {
       await sendOrder(payload);
+      notificationSuccess(
+        `${payload.name}, Ваш запит відправлено успішно. Ми зв'яжемось з Вами найближчим часом`
+      );
       closeOrderModal();
     } catch (error) {
+      notificationError('Щось пішло не так. Спробуйте ще раз');
       console.error('Помилка запиту:', error?.response?.data || error.message);
     }
   });

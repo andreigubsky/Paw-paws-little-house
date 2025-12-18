@@ -7,14 +7,13 @@
 
 .hero-section {
   padding-top: 64px;
-  background: linear-gradient(
-      90deg,
+  background: linear-gradient(90deg,
       var(--color-hero-overlay) 0%,
-      var(--color-hero-overlay-transparent) 70%
-    ),
+      var(--color-hero-overlay-transparent) 70%),
     url('/img/hero/hero-ima-dog-and-cat.jpg') center / cover no-repeat;
   min-height: 544px;
   width: 100%;
+
 }
 
 .hero-description-container {
@@ -74,6 +73,7 @@
   .hero-content-container {
     max-width: 704px;
   }
+
   .hero-description-title {
     max-width: 622px;
   }
@@ -86,6 +86,8 @@
 @media screen and (min-width: 1440px) {
   .hero-section {
     min-height: 900px;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .hero-description-container {

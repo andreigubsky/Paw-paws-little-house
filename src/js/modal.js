@@ -1,6 +1,7 @@
 import { createModalTemplate } from './render-functions';
 import { allAnimals } from './pets-list';
 import { openOrderModal } from './order-modal';
+import '../img/sprite.svg';
 
 const refs = { petList: null, backdrop: null, modalWindow: null };
 
@@ -23,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     refs.backdrop.classList.add('is-open');
     document.body.classList.add('modal-open');
   });
-
 
   function closePetModal() {
     if (!refs.backdrop || !refs.modalWindow) return;

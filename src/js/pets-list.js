@@ -6,6 +6,7 @@ import {
 } from './render-functions';
 import { renderPagination } from './pagination';
 import { scrollToCategories } from './scroll';
+import { notificationError } from './notifications';
 
 export const allAnimals = [];
 
@@ -44,29 +45,34 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const response = await getAnimals(page, perPage);
+  try {
+    const response = await getAnimals(page, perPage);
 
-  allAnimals.length = 0;
-  allAnimals.push(...response.animals);
+    allAnimals.length = 0;
+    allAnimals.push(...response.animals);
 
-  refs.petList.innerHTML = createTemplatePets(response.animals);
-  refs.showMoreBtn.disabled = response.animals.length < perPage;
-  refs.petList.innerHTML = createTemplatePets(response.animals);
-
-  totalPages = Math.ceil(response.totalItems / response.limit);
-
-  if (isMobile()) {
+    refs.petList.innerHTML = createTemplatePets(response.animals);
     refs.showMoreBtn.disabled = response.animals.length < perPage;
-    refs.pagination.innerHTML = '';
-  } else {
-    refs.showMoreBtn.classList.add('is-hidden');
-    refs.showMoreBtn.disabled = true;
+    refs.petList.innerHTML = createTemplatePets(response.animals);
 
-    renderPagination({
-      container: refs.pagination,
-      current: page,
-      total: totalPages,
-    });
+    totalPages = Math.ceil(response.totalItems / response.limit);
+
+    if (isMobile()) {
+      refs.showMoreBtn.disabled = response.animals.length < perPage;
+      refs.pagination.innerHTML = '';
+    } else {
+      refs.showMoreBtn.classList.add('is-hidden');
+      refs.showMoreBtn.disabled = true;
+
+      renderPagination({
+        container: refs.pagination,
+        current: page,
+        total: totalPages,
+      });
+    }
+  } catch (error) {
+    notificationError(`Не вдалося завантажити тварин. Спробуйте ще раз.`);
+    console.error(err);
   }
 });
 
@@ -140,6 +146,7 @@ refs.showMoreBtn.addEventListener('click', async () => {
 
   if (response.animals.length < perPage) {
     refs.showMoreBtn.disabled = true;
+    notificationError(`Це всі тваринки в цій категорії`);
   }
 
   scrollPage();
@@ -156,7 +163,6 @@ function scrollPage() {
     behavior: 'smooth',
   });
 }
-
 
 refs.pagination.addEventListener('click', async e => {
   const btn = e.target.closest('button');
