@@ -22,58 +22,118 @@
     />
     <!-- CSS -->
     <script type="module" crossorigin src="/Paw-paws-little-house/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/Paw-paws-little-house/assets/vendor-CufGE6K3.js">
-    <link rel="stylesheet" crossorigin href="/Paw-paws-little-house/assets/vendor-DnGaGgwy.css">
-    <link rel="stylesheet" crossorigin href="/Paw-paws-little-house/assets/index-Bg5hfsKp.css">
+    <link rel="modulepreload" crossorigin href="/Paw-paws-little-house/assets/vendor-BHpaU86b.js">
+    <link rel="stylesheet" crossorigin href="/Paw-paws-little-house/assets/vendor-CufM_Sxo.css">
+    <link rel="stylesheet" crossorigin href="/Paw-paws-little-house/assets/index-BcKUhev3.css">
   </head>
   <body>
     <!-- header.html -->
 <header class="header">
   <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="/Paw-paws-little-house/assets/sprite-Ckrx3vkc.svg#logo"></use>
+    <div class="wrapper-navigation">
+      <a href="/index.html" class="logo-image">
+        <svg>
+          <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-logo"></use>
         </svg>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#pet-list-section" class="nav-link">Знайди друга</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-us-section" class="nav-link">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#faq-section" class="nav-link">Часті запитання</a>
+          </li>
+          <li class="nav-item">
+            <a href="#success-stories-section" class="nav-link"
+              >Історії успіху</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button class="burger-btn" data-menu-open>
+      <svg class="icon-burger">
+        <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-burger-menu"></use>
+      </svg>
+    </button>
+    <button class="take-a-friend-header">Взяти друга</button>
   </div>
 </header>
 
     <!-- mobile-menu.html -->
-<section class="location">
-  <div class="container">mobile-menu</div>
-</section>
+<div class="mobile-menu" id="mobilemenu" data-menu>
+  <div class="container">
+    <div class="menu-header">
+      <a href="index.html" class="logo-image">
+        <svg class="icon-logo">
+          <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <button class="close-btn" type="button" data-menu-close>
+        <svg class="icon-menu-close" width="24" height="24">
+          <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="menu-content">
+      <ul class="menu-nav-list">
+        <li class="menu-nav-list-item">
+          <a href="#pet-list-section">Знайди друга</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#about-us-section">Про нас</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#faq-section">Часті запитання</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#success-stories-section">Історії успіху</a>
+        </li>
+      </ul>
+
+      <button class="take-a-friend">Взяти друга</button>
+    </nav>
+  </div>
+</div>
 
     <main>
       <!-- hero.html -->
-<section class="location">
-  <div class="container">hero</div>
+<section class="hero-section" id="hero-section">
+  <div class="container">
+    <div class="hero-description-container">
+      <h1 class="hero-description-title">
+        Кожне життя має значення. Знайди свого вірного друга
+      </h1>
+      <p class="hero-description-text">
+        Сотні котиків та собачок у притулку Хатинка Лапок чекають на свою
+        родину. Подаруйте їм дім.
+      </p>
+    </div>
+    <a href="#success-history" class="hero-button">Подивитись історії</a>
+  </div>
 </section>
 
       <!-- pet-list.html -->
-<section class="location">
+<section class="pet-list-section" id="pet-list-section">
   <div class="container">
     <h2 class="pet-title">Наші хвостики</h2>
     <p class="pet-text">Вони дуже чекають на знайомство з вами</p>
     <ul class="pet-categories js-pet-categories"></ul>
     <ul class="pet-list js-pet-list"></ul>
-    <button class="pet-show-more-btn js-pet-show-more-btn">
+    <div class="js-pet-pagination"></div>
+    <button type="button" class="pet-show-more-btn js-pet-show-more-btn">
       Показати Більше
     </button>
   </div>
 </section>
 
       <!-- pet-modal.html -->
-<section class="location">
+<section class="section">
   <div class="backdrop js-backdrop">
     <div class="modal-window js-modal-window"></div>
   </div>
@@ -81,12 +141,78 @@
 
       <!-- order-modal.html -->
 <section class="location">
-  <div class="container">order-modal</div>
+  <div class="container">
+    <div class="js-modal-order-overlay">
+      <div class="modal-order-content">
+        <button class="modal-close-btn" type="button" aria-label="close-btn">
+          <svg width="24" height="24">
+            <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-close" width="24" height="24"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Залишіть заявку на знайомство</p>
+        <form class="modal-order-form" id="order-form" novalidate>
+          <div class="modal-order-form-content field">
+            <label class="modal-order-label" for="user-name">Ім'я*</label>
+            <div class="modal-order-form-input field">
+              <input
+                class="modal-order-input"
+                type="text"
+                id="user-name"
+                name="user-name"
+                aria-label="user-name"
+                placeholder="Андрій"
+                autocomplete="off"
+                aria-describedby="user-name-error"
+                required
+              />
+              <p class="field-error" id="user-name-error"></p>
+            </div>
+          </div>
+
+          <div class="modal-order-form-content field">
+            <label class="modal-order-label" for="phone">Телефон*</label>
+            <div class="modal-order-form-input field">
+              <input
+                class="modal-order-input"
+                type="tel"
+                id="phone"
+                name="phone"
+                aria-label="phone"
+                inputmode="tel"
+                placeholder="+38 (096) 111 22 33"
+                aria-describedby="phone-error"
+                autocomplete="off"
+                required
+              />
+              <p class="field-error" id="phone-error"></p>
+            </div>
+          </div>
+
+          <div class="modal-order-form-content field">
+            <label class="modal-order-label" for="user-comment">Коментар</label>
+            <textarea
+              class="modal-user-comment"
+              id="user-comment"
+              name="user-comment"
+              aria-label="user-comment"
+              placeholder="Напишіть ваш коментар"
+              aria-describedby="user-comment-error"
+            ></textarea>
+            <p class="field-error" id="user-comment-error"></p>
+          </div>
+
+          <button type="submit" class="modal-btn-send" aria-label="send">
+            Надіслати
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
       <!-- about-us.html -->
 
-<section class="about-us">
+<section class="about-us" id="about-us-section">
   <div class="container">
     <h2 class="about-us-title">Чому Хатинка Лапок</h2>
 
@@ -95,9 +221,10 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <p class="swiper-desc">
-              Все почалося у 2015 році з кількох небайдужих людей та одного врятованого собаки.
-              Сьогодні ми — один з найбільших притулків у регіоні, але наша мета незмінна: дати
-              другий шанс тим, кого зрадили.
+              Все почалося у 2015 році з кількох небайдужих людей та одного
+              врятованого собаки. Сьогодні ми — один з найбільших притулків у
+              регіоні, але наша мета незмінна: дати другий шанс тим, кого
+              зрадили.
             </p>
             <img
               class="about-img"
@@ -110,9 +237,10 @@
 
           <div class="swiper-slide">
             <p class="swiper-desc">
-              Ми рятуємо, реабілітуємо та знаходимо люблячі родини для безпритульних тварин. Наша
-              мета — не просто дати прихисток, а й забезпечити кожному "хвостику" щасливе та
-              повноцінне життя в новій родині.
+              Ми рятуємо, реабілітуємо та знаходимо люблячі родини для
+              безпритульних тварин. Наша мета — не просто дати прихисток, а й
+              забезпечити кожному "хвостику" щасливе та повноцінне життя в новій
+              родині.
             </p>
             <img
               class="about-img img-position"
@@ -125,9 +253,10 @@
 
           <div class="swiper-slide">
             <p class="swiper-desc">
-              "Хатинка Лапок" — це команда професійних ветеринарів, кінологів та десятків
-              волонтерів, які щодня вкладають свою душу та час у турботу про наших підопічних. Ми
-              працюємо 24/7, бо їхнє життя залежить від нас.
+              "Хатинка Лапок" — це команда професійних ветеринарів, кінологів та
+              десятків волонтерів, які щодня вкладають свою душу та час у
+              турботу про наших підопічних. Ми працюємо 24/7, бо їхнє життя
+              залежить від нас.
             </p>
             <img
               class="about-img"
@@ -140,9 +269,9 @@
 
           <div class="swiper-slide">
             <p class="swiper-desc">
-              Ми створили безпечний та комфортний простір. Кожна тварина отримує якісне харчування,
-              своєчасну ветеринарну допомогу, проходить соціалізацію та гуляє на спеціально
-              обладнаних майданчиках.
+              Ми створили безпечний та комфортний простір. Кожна тварина отримує
+              якісне харчування, своєчасну ветеринарну допомогу, проходить
+              соціалізацію та гуляє на спеціально обладнаних майданчиках.
             </p>
             <img
               class="about-img"
@@ -155,9 +284,10 @@
 
           <div class="swiper-slide">
             <p class="swiper-desc">
-              Ваша допомога — безцінна. Ви можете взяти тваринку додому, стати волонтером, допомогти
-              фінансово або інформаційно. Кожен маленький внесок наближає нас до великої мети —
-              світу без безпритульних тварин.
+              Ваша допомога — безцінна. Ви можете взяти тваринку додому, стати
+              волонтером, допомогти фінансово або інформаційно. Кожен маленький
+              внесок наближає нас до великої мети — світу без безпритульних
+              тварин.
             </p>
             <img
               class="about-img"
@@ -174,32 +304,22 @@
         <div class="swiper-pagination"></div>
         <div class="swiper-button-wrapper">
           <div class="swiper-button-prev" aria-label="Previous slide">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2.9085 8.66525L8.41025 14.1667C8.58025 14.3371 8.66617 14.5371 8.668 14.7667C8.67 14.9964 8.58608 15.1971 8.41625 15.3688C8.24625 15.5409 8.04567 15.626 7.8145 15.624C7.58333 15.622 7.38208 15.5361 7.21075 15.3662L0.26075 8.41625C0.16975 8.32425 0.103583 8.22858 0.0622498 8.12925C0.0207498 8.02975 0 7.92425 0 7.81275C0 7.70125 0.0207498 7.596 0.0622498 7.497C0.103583 7.39783 0.16975 7.30242 0.26075 7.21075L7.21675 0.25475C7.39258 0.0849167 7.594 0 7.821 0C8.04783 0 8.24625 0.0849167 8.41625 0.25475C8.58608 0.42875 8.671 0.629499 8.671 0.856999C8.671 1.08467 8.58608 1.28375 8.41625 1.45425L2.9085 6.96175H15.1112C15.3554 6.96175 15.5594 7.04258 15.7233 7.20425C15.8871 7.36592 15.969 7.569 15.969 7.8135C15.969 8.058 15.8871 8.26108 15.7233 8.42275C15.5594 8.58442 15.3554 8.66525 15.1112 8.66525H2.9085Z"
-                fill="#02060A"
-              />
+            <svg width="24" height="24">
+              <use
+                href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-arrow-prev"
+                width="24"
+                height="24"
+              ></use>
             </svg>
           </div>
 
           <div class="swiper-button-next" aria-label="Next slide">
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.0545 8.66228H0.85175C0.607083 8.66228 0.404 8.58145 0.2425 8.41978C0.0808333 8.25812 0 8.05503 0 7.81053C0 7.56603 0.0808333 7.36295 0.2425 7.20128C0.404 7.03962 0.607083 6.95878 0.85175 6.95878H13.0545L7.55275 1.45728C7.38275 1.28728 7.29667 1.08703 7.2945 0.856535C7.29217 0.625868 7.37608 0.425117 7.54625 0.254284C7.71658 0.0827841 7.91733 -0.00196542 8.1485 3.45823e-05C8.37967 0.00203458 8.58092 0.0879512 8.75225 0.257785L15.7022 7.20778C15.7932 7.29978 15.8594 7.39545 15.9007 7.49478C15.9422 7.59428 15.963 7.69978 15.963 7.81128C15.963 7.92278 15.9422 8.02803 15.9007 8.12703C15.8594 8.2262 15.7932 8.32162 15.7022 8.41328L8.74625 15.3633C8.57042 15.5371 8.369 15.624 8.142 15.624C7.91517 15.624 7.71675 15.5366 7.54675 15.3618C7.37692 15.1916 7.292 14.9929 7.292 14.7655C7.292 14.5384 7.37692 14.3398 7.54675 14.1698L13.0545 8.66228Z"
-                fill="#02060A"
-              />
+            <svg width="24" height="24">
+              <use
+                href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-arrow-next"
+                width="24"
+                height="24"
+              ></use>
             </svg>
           </div>
         </div>
@@ -209,12 +329,245 @@
 </section>
 
       <!-- faq.html -->
-<section class="location">
-  <div class="container">faq</div>
+<section class="faq-section" id="faq-section">
+  <div class="container">
+    <h2 class="faq-header">Все, що ви хотіли знати</h2>
+    <ul class="faq-list accordion-container">
+      <li class="faq-list-item ac">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Я мрію про пухнастика! Що мені потрібно зробити, щоб забрати
+            хвостика додому?
+          </h3>
+          <button type="button" class="faq-button">
+            <svg class="faq-open-icon" width="24" height="24">
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-content-inner">
+            <p class="faq-text">
+              Це чудово, що ви готові подарувати дім одному з наших підопічних!
+              Ми дуже раді будемо вам у цьому допомогти. Процес «усиновлення» у
+              нас простий та зрозумілий:
+            </p>
+            <ol class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Оберіть друга: Придивіться до наших хвостиків у розділі
+                  «Знайди друга».
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Залиште заявку: Коли відчуєте, що це «ваша» тваринка,
+                  натискайте кнопку «Взяти додому» та заповніть коротку анкету.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Поговоріть з куратором: Наш волонтер зателефонує вам, щоб
+                  познайомитись ближче, розповісти про характер тваринки та
+                  відповісти на всі ваші питання.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Приїжджайте знайомитись: Якщо ви ідеально підходите одне
+                  одному, ми домовимось про зустріч у притулку.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text faq-text-last">
+                  Дорога додому: Після знайомства та підписання договору про
+                  відповідальне утримання, ваш новий друг поїде з вами у своє
+                  нове, щасливе життя!
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Як мені найкраще підготувати свій дім та родину до появи хвостика?
+          </h3>
+          <button type="button" class="faq-button">
+            <svg class="faq-open-icon" width="24" height="24">
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-content-inner">
+            <p class="faq-text">
+              Чудове питання, яке показує вашу турботу! Переїзд — це завжди
+              невеликий стрес для тваринки, але правильна підготовка зробить цей
+              процес легким і радісним. Ось кілька порад:
+            </p>
+            <ul class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Безпечний простір: Переконайтесь, що на вікнах є сітки, а
+                  дроти та побутова хімія сховані.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Особисті речі: Підготуйте для хвостика дві мисочки (для їжі та
+                  води), лежанку чи будиночок, лоток з наповнювачем для котика
+                  або повідець і нашийник для собачки.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Сімейна розмова: Обговоріть з рідними майбутні обов'язки.
+                  Важливо, щоб усі були готові до появи нового мешканця.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text faq-text-last">
+                  Терпіння та любов: Дайте тваринці час, щоб звикнути. Не квапте
+                  її, будьте поруч, розмовляйте лагідним голосом — і ваша любов
+                  творитиме дива!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Чи можу я бути впевненим, що тваринка здорова? Розкажіть про
+            щеплення.
+          </h3>
+          <button type="button" class="faq-button">
+            <svg class="faq-open-icon" width="24" height="24">
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-inner-content">
+            <p class="faq-text">
+              Так, звісно. Здоров'я наших підопічних — наш головний пріоритет.
+              Кожна тваринка, яка потрапляє до нас, проходить повний огляд у
+              ветеринара. Ми гарантуємо, що:
+            </p>
+            <ul class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Усі хвостики оброблені від бліх та глистів.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Усі вакциновані комплексною вакциною за віком.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Дорослі тварини (зазвичай від 6-8
+                  місяців) стерилізовані/кастровані.
+                </p>
+              </li>
+            </ul>
+            <p class="faq-text faq-text-last">
+              Разом із тваринкою ви обов'язково отримаєте її ветеринарний
+              паспорт з усіма відмітками. Якщо у когось є особливі потреби у
+              догляді чи харчуванні, ми чесно і детально про це розповімо.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Я дуже хочу допомогти, але поки не готовий до адопції. Чим я можу
+            підтримати «Хатинку лапок»?
+          </h3>
+          <button type="button" class="faq-button">
+            <svg class="faq-open-icon" width="24" height="24">
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-inner-content">
+            <p class="faq-text">
+              Дякуємо вам за велике серце та бажання допомогти! Кожна допомога
+              для нас безцінна. Навіть якщо ви не можете взяти тваринку, ви
+              можете стати її янголом-охоронцем. Ось як:
+            </p>
+            <ul class="faq-list-close">
+              <li>
+                <p class="faq-text">
+                  Допомогти фінансово: Ваша пожертва піде на корм, ліки, оплату
+                  комунальних послуг та зарплату персоналу.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Стати волонтером: Нам завжди потрібні люблячі руки для
+                  прогулянок з собачками, прибирання та, найголовніше, для
+                  спілкування з тваринками.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text">
+                  Подарувати необхідне: Ми завжди раді кормам, лікам,
+                  наповнювачам для лотків, іграшкам, теплим ковдрам.
+                </p>
+              </li>
+              <li>
+                <p class="faq-text faq-text-last">
+                  Допомогти інформаційно: Найпростіший, але дуже дієвий спосіб —
+                  розповідати про нас у соцмережах. Можливо, саме ваш репост
+                  допоможе комусь знайти свою долю!
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="faq-list-item ac">
+        <div class="faq-open-div ac-trigger">
+          <h3 class="faq-list-question ac-header">
+            Мені сподобалась одна з ваших тваринок на сайті. Чи можу я приїхати,
+            щоб познайомитися з нею особисто?
+          </h3>
+          <button type="button" class="faq-button">
+            <svg class="faq-open-icon" width="24" height="24">
+              <use class="faq-icon-use" href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-add"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq-close-div ac-panel">
+          <div class="faq-inner-content">
+            <p class="faq-text">
+              Авжеж! Ми віримо, що справжня магія стається лише при особистій
+              зустрічі. Щоб знайомство було комфортним і для вас, і для
+              тваринки, ми просимо вас спочатку заповнити онлайн-заявку на
+              нашому сайті.
+            </p>
+            <p class="faq-text faq-text-last">
+              Після цього з вами зв'яжеться куратор тваринки, щоб домовитись про
+              зручний час для вашого візиту. Такий підхід дозволяє нам приділити
+              вам максимум уваги та уникнути зайвого стресу для наших
+              підопічних. З нетерпінням чекаємо на знайомство!
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </section>
 
       <!-- success-stories.html -->
-<section class="location">
+<section class="success-stories-section" id="success-stories-section">
   <div class="container">success-stories</div>
 </section>
 
@@ -222,27 +575,31 @@
     <!-- footer.html -->
 <footer class="footer">
   <div class="container">
-
     <!-- Logo -->
     <a class="footer-logo-link" href="../index.html">
       <svg class="footer-logo-img">
-        <use href="/Paw-paws-little-house/assets/sprite-Ckrx3vkc.svg#icon-logo"></use>
+        <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-logo"></use>
       </svg>
     </a>
 
     <!-- Footer links -->
     <ul class="footer-anchor-list">
       <li class="footer-anchor-item">
-        <a href="#about-us" class="footer-anchor-link">Про нас</a>
+        <a href="#about-us-section" class="footer-anchor-link">Про нас</a>
       </li>
       <li class="footer-anchor-item">
-        <a href="#pets-list" class="footer-anchor-link">Знайти друга</a>
+        <a href="#pets-list-section" class="footer-anchor-link">Знайти друга</a>
       </li>
       <li class="footer-anchor-item">
-        <a href="#faq" class="footer-anchor-link">Часті запитання</a>
+        <a href="#faq-section" class="footer-anchor-link">Часті запитання</a>
       </li>
       <li class="footer-anchor-item">
-        <a href="#success-stories" class="footer-anchor-link">Історії успіху</a>
+        <a
+          href="#success-stories-section"
+          class="footer-anchor-link"
+          id="success-history"
+          >Історії успіху</a
+        >
       </li>
     </ul>
 
@@ -256,7 +613,7 @@
           rel="noopener noreferrer"
         >
           <svg class="footer-social-icons" width="32px" height="32px">
-            <use href="/Paw-paws-little-house/assets/sprite-Ckrx3vkc.svg#icon-facebook"></use>
+            <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-facebook"></use>
           </svg>
         </a>
       </li>
@@ -268,7 +625,7 @@
           rel="noopener noreferrer"
         >
           <svg class="footer-social-icons" width="32px" height="32px">
-            <use href="/Paw-paws-little-house/assets/sprite-Ckrx3vkc.svg#icon-instagram"></use>
+            <use href="/Paw-paws-little-house/assets/sprite-B4MSrLYj.svg#icon-instagram"></use>
           </svg>
         </a>
       </li>
