@@ -156,10 +156,8 @@ refs.showMoreBtn.addEventListener('click', async () => {
 function scrollPage() {
   const elem = document.querySelector('.js-pet-list div.pet-card__container');
   if (!elem) return;
-  console.log(elem)
-
+ 
   const heightOfElem = elem.getBoundingClientRect().height ;
-console.log(heightOfElem);
 
   window.scrollBy({
     top: heightOfElem,
