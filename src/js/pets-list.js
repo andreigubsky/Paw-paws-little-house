@@ -193,6 +193,9 @@ refs.pagination.addEventListener('click', async e => {
       ? await getAnimals(page, perPage)
       : await getAnimalsByQuery(query, page, perPage);
 
+  allAnimals.length = 0;
+  allAnimals.push(...response.animals);
+
   refs.petList.innerHTML = createTemplatePets(response.animals);
 
   totalPages = Math.ceil(response.totalItems / response.limit);
