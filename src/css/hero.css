@@ -5,8 +5,12 @@ html {
 }
 
 :root {
-  --color-hero-overlay: rgba(62, 54, 38, 0.74);
-  --color-hero-overlay-transparent: rgba(62, 54, 38, 0);
+--color-white: #ffffff; 
+--color-dark: #02060A; 
+--color-hero-btn: #88765C; 
+--color-hero-hover: #C3B49D; 
+--color-hero-overlay: rgba(62, 54, 38, 0.74); 
+--color-hero-overlay-transparent: rgba(62, 54, 38, 0);
 }
 
 .hero-section {
@@ -42,7 +46,7 @@ html {
 }
 
 .hero-button {
-  background-color: var(--color-mariner-dark);
+  background-color: var(--color-hero-btn);
   border-radius: 6px;
   width: 171px;
   height: 45px;
@@ -65,14 +69,9 @@ html {
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--color-mariner);
-  border: var(--color-neutral-darkest) 1px solid;
-  color: var(--color-neutral-darkest);
-}
-
-.hero-button:focus-visible {
-  outline: 2px solid var(--color-neutral-darkest);
-  outline-offset: 2px;
+  background-color: var(--color-hero-hover);
+  border: var(--color-dark) 1px solid;
+  color: var(--color-dark);
 }
 
 @media screen and (min-width: 768px) {
