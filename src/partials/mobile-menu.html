@@ -1,4 +1,36 @@
 <!-- mobile-menu.html -->
-<section class="location">
-  <div class="container">mobile-menu</div>
-</section>
+<div class="mobile-menu" id="mobilemenu" data-menu>
+  <div class="container">
+    <div class="menu-header">
+      <a href="index.html" class="logo-image">
+        <svg class="icon-logo">
+          <use href="/img/sprite.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <button class="close-btn" type="button" data-menu-close>
+        <svg class="icon-menu-close" width="24" height="24">
+          <use href="/img/sprite.svg#icon-close-btn"></use>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="menu-content">
+      <ul class="menu-nav-list">
+        <li class="menu-nav-list-item">
+          <a href="#pet-list-section">Знайди друга</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#about-us-section">Про нас</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#faq-section">Часті запитання</a>
+        </li>
+        <li class="menu-nav-list-item">
+          <a href="#success-stories-section">Історії успіху</a>
+        </li>
+      </ul>
+
+      <button class="take-a-friend">Взяти друга</button>
+    </nav>
+  </div>
+</div>

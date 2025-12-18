@@ -1,0 +1,70 @@
+/* ========================== */
+
+.js-pet-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+
+.js-pet-pagination button {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid var(--color-mariner-light, #cbbba0);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 120ms ease, background-color 120ms ease, border-color 120ms ease;
+}
+
+.js-pet-pagination button:hover:not(:disabled) {
+    transform: translateY(-1px);
+}
+
+.js-pet-pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+.js-pet-pagination button.is-active {
+    background: var(--color-scheme-1-foreground);
+    border-color: #9aa0a6;
+
+}
+
+
+.js-pet-pagination .dots {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 8px;
+    opacity: 0.7;
+    user-select: none;
+}
+
+
+.js-pet-pagination button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+.js-pet-list {
+    overflow-anchor: none;
+}
+
+@media (max-width: 767px) {
+    .js-pet-pagination {
+        display: none;
+    }
+}
