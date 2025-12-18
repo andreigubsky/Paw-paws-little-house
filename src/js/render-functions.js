@@ -73,7 +73,7 @@ export function createModalTemplate(pet) {
         aria-label="Close modal"
       >
         <svg width="24" height="24">
-            <use href="/img/sprite.svg#icon-close" width="24" height="24"></use>
+            <use href="img/sprite.svg#icon-close" width="24" height="24"></use>
           </svg>
       </button>
 
