@@ -247,7 +247,6 @@
   }
   .reviews-subtitle {
     max-width: 704px;
-    margin: 0 auto 64px auto;
   }
   .reviews-slider .swiper {
     max-width: 704px;
@@ -289,26 +288,54 @@
   }
 }
 @media only screen and (min-width: 1440px) {
-  .reviews {
-    max-width: 1312px;
-    height: 753px;
+.reviews-section .container {
+    max-width: 1440px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 64px;
+    padding-right: 64px;
   }
-  .reviews-slider-controls {
-    max-width: 1312px;
-    height: auto;
-    min-height: 32px;
+
+.reviews-title {
+    font-size: 48px;
+    max-width: 560px;
+    margin: 0 auto 24px auto;
   }
-  .swiper-wrapper {
-    height: 753px;
+
+.reviews-subtitle {
+  font-size: 18px;
+  margin: 0 auto 40px auto;
+}
+
+.reviews-slider .swiper {
+    max-width: 100%;
+    margin: 0 auto;
   }
-  .reviews-slider {
-    position: relative;
+
+.reviews-slider-controls {
+    max-width: 100%;
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
   }
-  .reviews-slider .swiper-button-next,
-  .reviews-slider .swiper-button-prev {
-    top: calc(753px / 2);
+
+.reviews-slider .swiper-button-wrapper {
+    margin-left: auto;
+    display: flex;
+    gap: 16px;
   }
-  .reviews-slider-controls .swiper-pagination {
-    margin-top: 24px;
+.reviews-slider .swiper-button-next,
+.reviews-slider .swiper-button-prev {
+    position: static;
+    transform: none;
+    margin: 0;
+  }
+
+.reviews-slider .swiper-pagination {
+    margin: 0;
+    text-align: left;
+    justify-content: flex-start;
   }
 }
