@@ -45,7 +45,7 @@ import{a as L,i as w,S as I,N as A,P as N,K as W,A as D}from"./assets/vendor-Dm-
         aria-label="Close modal"
       >
         <svg width="24" height="24">
-            <use href="/img/sprite.svg#icon-close" width="24" height="24"></use>
+            <use href="img/sprite.svg#icon-close" width="24" height="24"></use>
           </svg>
       </button>
 
