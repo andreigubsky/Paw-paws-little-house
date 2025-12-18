@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!refs.petList || !refs.backdrop || !refs.modalWindow) return;
 
-  /* ================= OPEN MODAL ================= */
   refs.petList.addEventListener('click', e => {
     const btn = e.target.closest('.js-more-info');
     if (!btn) return;
@@ -25,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('modal-open');
   });
 
-  /* ================= CLOSE MODAL ================= */
 
   function closePetModal() {
     if (!refs.backdrop || !refs.modalWindow) return;

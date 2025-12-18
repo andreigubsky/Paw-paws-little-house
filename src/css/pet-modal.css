@@ -114,7 +114,6 @@ body.modal-open {
 
 /* ================= MOBILE ================= */
 @media (min-width: 768px) {
-
   .backdrop {
     padding: 0 20px;
   }
@@ -123,8 +122,6 @@ body.modal-open {
     max-width: 704px;
     padding: 64px 32px;
   }
-
-
 
   .pet-modal-content {
     display: flex;
@@ -144,7 +141,6 @@ body.modal-open {
     margin-bottom: 0;
   }
 
-
   .pet-modal-image img {
     width: 100%;
   }
@@ -160,7 +156,7 @@ body.modal-open {
     flex-direction: column;
   }
 
-  .pet-modal-info>* {
+  .pet-modal-info > * {
     order: 2;
   }
 
@@ -176,7 +172,7 @@ body.modal-open {
   }
 
   .pet-modal-info h3,
-  .pet-modal-info h3+p {
+  .pet-modal-info h3 + p {
     order: 3;
   }
 }

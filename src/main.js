@@ -12,6 +12,3 @@ import '/js/order-modal';
 import '/js/faq';
 import '/js/mobile-menu';
 import '/js/swiper-success';
-
-// Основна логіка тут
-//

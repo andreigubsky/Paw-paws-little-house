@@ -1,70 +1,68 @@
 <!-- order-modal.html -->
-<section class="location">
-  <div class="container">
-    <div class="js-modal-order-overlay">
-      <div class="modal-order-content">
-        <button class="modal-close-btn" type="button" aria-label="close-btn">
-          <svg width="24" height="24">
-            <use href="/img/sprite.svg#icon-close" width="24" height="24"></use>
-          </svg>
+<div class="container">
+  <div class="js-modal-order-overlay">
+    <div class="modal-order-content">
+      <button class="modal-close-btn" type="button" aria-label="close-btn">
+        <svg width="24" height="24">
+          <use href="/img/sprite.svg#icon-close" width="24" height="24"></use>
+        </svg>
+      </button>
+      <p class="modal-title">Залишіть заявку на знайомство</p>
+      <form class="modal-order-form" id="order-form" novalidate>
+        <div class="modal-order-form-content field">
+          <label class="modal-order-label" for="user-name">Ім'я*</label>
+          <div class="modal-order-form-input field">
+            <input
+              class="modal-order-input"
+              type="text"
+              id="user-name"
+              name="user-name"
+              aria-label="user-name"
+              placeholder="Андрій"
+              autocomplete="off"
+              aria-describedby="user-name-error"
+              required
+            />
+            <p class="field-error" id="user-name-error"></p>
+          </div>
+        </div>
+
+        <div class="modal-order-form-content field">
+          <label class="modal-order-label" for="phone">Телефон*</label>
+          <div class="modal-order-form-input field">
+            <input
+              class="modal-order-input"
+              type="tel"
+              id="phone"
+              name="phone"
+              aria-label="phone"
+              inputmode="tel"
+              placeholder="+38 (096) 111 22 33"
+              aria-describedby="phone-error"
+              autocomplete="off"
+              required
+            />
+            <p class="field-error" id="phone-error"></p>
+          </div>
+        </div>
+
+        <div class="modal-order-form-content field">
+          <label class="modal-order-label" for="user-comment">Коментар</label>
+          <textarea
+            class="modal-user-comment"
+            id="user-comment"
+            name="user-comment"
+            aria-label="user-comment"
+            placeholder="Напишіть ваш коментар"
+            aria-describedby="user-comment-error"
+          ></textarea>
+          <p class="field-error" id="user-comment-error"></p>
+        </div>
+
+        <button type="submit" class="modal-btn-send" aria-label="send">
+          Надіслати
         </button>
-        <p class="modal-title">Залишіть заявку на знайомство</p>
-        <form class="modal-order-form" id="order-form" novalidate>
-          <div class="modal-order-form-content field">
-            <label class="modal-order-label" for="user-name">Ім'я*</label>
-            <div class="modal-order-form-input field">
-              <input
-                class="modal-order-input"
-                type="text"
-                id="user-name"
-                name="user-name"
-                aria-label="user-name"
-                placeholder="Андрій"
-                autocomplete="off"
-                aria-describedby="user-name-error"
-                required
-              />
-              <p class="field-error" id="user-name-error"></p>
-            </div>
-          </div>
-
-          <div class="modal-order-form-content field">
-            <label class="modal-order-label" for="phone">Телефон*</label>
-            <div class="modal-order-form-input field">
-              <input
-                class="modal-order-input"
-                type="tel"
-                id="phone"
-                name="phone"
-                aria-label="phone"
-                inputmode="tel"
-                placeholder="+38 (096) 111 22 33"
-                aria-describedby="phone-error"
-                autocomplete="off"
-                required
-              />
-              <p class="field-error" id="phone-error"></p>
-            </div>
-          </div>
-
-          <div class="modal-order-form-content field">
-            <label class="modal-order-label" for="user-comment">Коментар</label>
-            <textarea
-              class="modal-user-comment"
-              id="user-comment"
-              name="user-comment"
-              aria-label="user-comment"
-              placeholder="Напишіть ваш коментар"
-              aria-describedby="user-comment-error"
-            ></textarea>
-            <p class="field-error" id="user-comment-error"></p>
-          </div>
-
-          <button type="submit" class="modal-btn-send" aria-label="send">
-            Надіслати
-          </button>
-        </form>
-      </div>
+      </form>
     </div>
   </div>
-</section>
+</div>
