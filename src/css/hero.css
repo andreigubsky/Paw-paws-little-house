@@ -5,23 +5,25 @@ html {
 }
 
 :root {
-  --color-hero-overlay: rgba(62, 54, 38, 0.74);
-  --color-hero-overlay-transparent: rgba(62, 54, 38, 0);
+--color-white: #ffffff; 
+--color-dark: #02060A; 
+--color-hero-btn: #88765C; 
+--color-hero-hover: #C3B49D; 
+--color-hero-overlay: rgba(62, 54, 38, 0.74); 
+--color-hero-overlay-transparent: rgba(62, 54, 38, 0);
 }
 
 .hero-section {
-  padding-top: 64px;
-  padding-bottom: 64px;
-  background: linear-gradient(
-      90deg,
-      var(--color-hero-overlay) 0%,
-      var(--color-hero-overlay-transparent) 70%
-    ),
-    url('/img/hero/hero-ima-dog-and-cat.jpg') center / cover no-repeat;
-  min-height: 544px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+    padding-top: 64px;
+    background: linear-gradient(
+        90deg,
+        var(--color-hero-overlay) 0%,
+        var(--color-hero-overlay-transparent) 70%
+        ),
+        url('/img/hero/hero-ima-dog-and-cat.jpg') center / cover no-repeat;
+    min-height: 544px;
+    width: 100%;
+    flex-direction: column;
 }
 
 .hero-description-container {
@@ -44,7 +46,7 @@ html {
 }
 
 .hero-button {
-  background-color: var(--color-mariner-dark);
+  background-color: var(--color-hero-btn);
   border-radius: 6px;
   width: 171px;
   height: 45px;
@@ -67,23 +69,14 @@ html {
 
 .hero-button:hover,
 .hero-button:focus {
-  background-color: var(--color-mariner);
-  border: var(--color-neutral-darkest) 1px solid;
-  color: var(--color-neutral-darkest);
-}
-
-.hero-button:focus-visible {
-  outline: 2px solid var(--color-neutral-darkest);
-  outline-offset: 2px;
+  background-color: var(--color-hero-hover);
+  border: var(--color-dark) 1px solid;
+  color: var(--color-dark);
 }
 
 @media screen and (min-width: 768px) {
-  .hero-section {
-    padding-top: 128px;
-  }
   .hero-content-container {
     max-width: 704px;
-    padding-left: 0;
   }
   .hero-description-title {
     max-width: 622px;
@@ -114,7 +107,6 @@ html {
   .hero-button {
     width: 198px;
     height: 48px;
-    gap: 16px;
     font-size: 16px;
   }
 }
