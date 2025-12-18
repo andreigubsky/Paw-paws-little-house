@@ -1,8 +1,4 @@
 /* pet-list.css */
-.pet-list-section {
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
 .pet-title {
   font-family: 'Open Sans', sans-serif;
   font-weight: 700;
@@ -15,7 +11,6 @@
   color: #02060a;
   margin-bottom: 16px;
 }
-
 .pet-text {
   font-family: 'IBM Plex Sans', sans-serif;
 
@@ -75,8 +70,7 @@
   border-radius: 8px;
   padding-block: 12px;
   padding-inline: 24px;
-  min-width: 280px;
-  width: 100%;
+  width: 335px;
   height: 45px;
 
   background: #88765c;
@@ -113,7 +107,6 @@
   color: #02060a;
   margin-bottom: 4px;
 }
-
 .pet-card__name {
   font-family: 'Open Sans', sans-serif;
 
@@ -126,7 +119,6 @@
   color: #02060a;
   margin-bottom: 4px;
 }
-
 .pet-card__groups {
   display: flex;
   flex-wrap: wrap;
@@ -134,7 +126,6 @@
   gap: 4px;
   height: 63px;
 }
-
 .pet-card__group {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 600;
@@ -157,7 +148,6 @@
   gap: 16px;
   margin-bottom: 16px;
 }
-
 .pet-card__meta-item {
   font-family: 'IBM Plex Sans', sans-serif;
 
@@ -168,7 +158,6 @@
   line-height: 1.5;
   color: #02060a;
 }
-
 .pet-card__description {
   font-family: 'IBM Plex Sans', sans-serif;
 
@@ -180,7 +169,6 @@
   color: #02060a;
   margin-bottom: 16px;
 }
-
 .pet-card__button {
   border: 1px solid #02060a;
   border-radius: 8px;
@@ -239,7 +227,8 @@
   }
 
   .pet-show-more-btn {
-    display: none;
+    display: block;
+    margin: 0 auto;
   }
 
   .pet-list {
@@ -287,14 +276,14 @@
     width: calc((100% - 32px) / 3);
   }
 
-  /* .pet-show-more-btn {
+  .pet-show-more-btn {
     font-size: 16px;
 
     padding: 12px 32px;
     width: 200px;
     display: flex;
     align-items: center;
-  } */
+  }
 
   .pet-card__species {
     font-size: 12px;
@@ -315,11 +304,4 @@
   .pet-card__description {
     font-size: 14px;
   }
-}
-
-.pet-more {
-  list-style: none;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }

@@ -10,7 +10,7 @@ const options = {
     mode: 'no-cors',
   },
 };
-
+  
 export async function getAnimalsByQuery(categoryId, page, limit) {
   try {
     const requestURL = `${url}/?categoryId=${categoryId}&page=${page}&limit=${limit}`;
