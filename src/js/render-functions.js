@@ -148,3 +148,24 @@ export function createModalTemplate(pet) {
     </div>
   `;
 }
+
+import fullStar from '/img/SVG/star-filled.svg';
+import halfStar from '/img/SVG/star-half.svg';
+import emptyStar from '/img/SVG/star-outline.svg';
+export function renderStars(container, score, maxStars = 5) {
+  container.innerHTML = '';
+  const roundedScore = Math.round(score * 2) / 2;
+  for (let i = 1; i <= maxStars; i++) {
+    const img = document.createElement('img');
+    img.className = 'icon-star';
+    img.alt = 'star rating';
+    if (roundedScore >= i) {
+      img.src = fullStar;
+    } else if (roundedScore >= i - 0.5) {
+      img.src = halfStar;
+    } else {
+      img.src = emptyStar;
+    }
+    container.appendChild(img);
+  }
+}
