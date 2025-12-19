@@ -2,6 +2,7 @@
 import fullStar from '/img/SVG/star-filled.svg';
 import halfStar from '/img/SVG/star-half.svg';
 import emptyStar from '/img/SVG/star-outline.svg';
+import imgUrlClose from '/img/sprite.svg#icon-close'
 
 export function createTemplateCategory(category) {
   return `
@@ -73,7 +74,7 @@ export function createModalTemplate(pet) {
         aria-label="Close modal"
       >
         <svg width="24" height="24">
-            <use href="img/sprite.svg#icon-close" width="24" height="24"></use>
+            <use href="${imgUrlClose}" width="24" height="24"></use>
           </svg>
       </button>
 
@@ -126,4 +127,21 @@ export function renderStars(container, score, maxStars = 5) {
     }
     container.appendChild(img);
   }
+}
+
+export function createReviewCardMarkup(review) {
+  const rating = review.rate;
+  const comment = review.description;
+  const author = review.author;
+  return `
+    <div class="swiper-slide review-card">
+      <div class="review-rating">
+          <div class="rating-container" data-score="${rating}"></div>
+      </div>
+      <p class="review-text">${comment}</p>
+      <div class="review-author-wrap">
+        <h3 class="review-author">${author}</h3>
+      </div>
+    </div>
+  `;
 }

@@ -1,6 +1,6 @@
 import Accordion from "accordion-js";
 import "accordion-js/dist/accordion.min.css";
-import imgUrl from '/img/sprite.svg'
+import imgUrlAdd from '/img/sprite.svg#icon-add'
 import imgUrlClose from '/img/sprite.svg#icon-close'
 
 
@@ -13,6 +13,6 @@ new Accordion('.accordion-container', {
     },
     onClose: (currentElement) => {
         const icon = currentElement.querySelector(".faq-icon-use");
-        icon.href.baseVal = `${imgUrl}#icon-add`;
+        icon.href.baseVal = imgUrlAdd;
     }
 }); 
