@@ -1,36 +1,13 @@
-import axios from 'axios';
+import { fetchReviews } from './paw-hut-api-feedbacks.js';
+import { renderStars, createReviewCardMarkup } from '/js/render-functions';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import { renderStars } from '/js/render-functions';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-const REVIEWS_URL = 'https://paw-hut.b.goit.study/api/feedbacks';
+
 const reviewsContainer = document.getElementById('feedbacks-list');
-async function fetchReviews() {
-  try {
-    const response = await axios.get(REVIEWS_URL);
-    return response.data.feedbacks || response.data || [];
-  } catch (error) {
-    return [];
-  }
-}
-function createReviewCardMarkup(review) {
-  const rating = review.rate;
-  const comment = review.description;
-  const author = review.author;
-  return `
-    <div class="swiper-slide review-card">
-      <div class="review-rating">
-          <div class="rating-container" data-score="${rating}"></div>
-      </div>
-      <p class="review-text">${comment}</p>
-      <div class="review-author-wrap">
-        <h3 class="review-author">${author}</h3>
-      </div>
-    </div>
-  `;
-}
+
 async function initReviewsSection() {
   if (!reviewsContainer) return;
   const reviews = await fetchReviews();
