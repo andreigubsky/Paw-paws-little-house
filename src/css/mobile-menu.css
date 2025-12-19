@@ -15,20 +15,27 @@
   overflow-y: scroll;
 }
 
+.menu-container {
+  padding: 0;
+}
+
 .mobile-menu.is-open {
   pointer-events: auto;
   transform: translateX(0);
   opacity: 1;
 }
+
 .no-scroll {
   overflow: hidden;
   position: fixed;
   width: 100%;
 }
-.mobile-menu > .container {
+
+.mobile-menu>.container {
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 0;
 }
 
 .menu-header {
@@ -36,7 +43,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 18px 0;
+  padding: 8px 12px 8px 20px;
+  margin: 0;
+  height: 64px;
 }
 
 .close-btn {
@@ -79,8 +88,8 @@
 
 .take-a-friend {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-mariner-dark);
   border: 1px solid var(--color-mariner-dark);
   border: none;
@@ -88,12 +97,17 @@
   color: var(--color-white);
   font-size: 14px;
   line-height: 150%;
-  width: 325px;
+  width: 280px;
   height: 37px;
   margin-top: 64px;
   padding: 8px 20px;
-  width: 335px;
   height: 37px;
+}
+
+@media (min-width: 768px) {
+  .menu-header {
+    padding: 8px 32px;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -101,6 +115,7 @@
     width: 196px;
   }
 }
+
 @media (min-width: 1440px) {
   .mobile-menu {
     display: none;
