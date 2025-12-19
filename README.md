@@ -20,22 +20,28 @@
 
 **Paw paws litle house** використовує багато open source проєктів:
 
-- [HTML] - мова розмітки у веб
-- [CSS] - олюблені стилі
-- [JS] - найкраща мова програмування
-- [swiper] - потужна і гнучка бібліотека для роботи горталок
-- [axios] - топова бібліотека для роботи з запитами на JS
-- [accordion-js] - легка бібліотека для роботи з акордеоном
-- [iziToast] - гнучка бібліотека для відображення сповіщень
+- [HTML](https://html.spec.whatwg.org/) - мова розмітки у веб
+- [CSS](https://www.w3.org/Style/CSS/specs.en.html) - олюблені стилі
+- [JS](https://tc39.es/ecma262/) - найкраща мова програмування
+- [swiper](https://swiperjs.com/) - потужна і гнучка бібліотека для роботи
+  горталок
+- [axios](https://axios-http.com/ru/docs/intro) - топова бібліотека для роботи з
+  запитами на JS
+- [accordion-js](https://www.npmjs.com/package/accordion-js) - легка бібліотека
+  для роботи з акордеоном
+- [iziToast](https://www.npmjs.com/package/izitoast) - гнучка бібліотека для
+  відображення сповіщень
 
 ## Інструменти
 
-- [VS Code] - неперевершений редактор коду
-- [Git] - система керування версіями у проекті при командній роботі
-- [Trello] - система керування проектом
+- [VS Code](https://code.visualstudio.com/) - неперевершений редактор коду
+- [Git](https://git-scm.com/) - система керування версіями у проекті при
+  командній роботі
+- [Trello](https://trello.com/) - система керування проектом
 
-І звичайно **Paw paws litle house** - публічний ресурс [public repository][dill]
-на GitHub.
+І звичайно **Paw paws litle house** - публічний ресурс
+[public repository](https://github.com/andreigubsky/Paw-paws-little-house) на
+GitHub.
 
 ## Інсталяція
 
@@ -61,18 +67,3 @@ http://localhost:5173/
 GOIT
 
 **Всі права захищені!**
-
-[//]:
-  #
-  "These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax"
-[HTML]: https://html.spec.whatwg.org/
-[CSS]: https://www.w3.org/Style/CSS/specs.en.html
-[JS]: https://tc39.es/ecma262/
-[iziToast]: https://www.npmjs.com/package/izitoast
-[swiper]: https://swiperjs.com/
-[axios]: https://axios-http.com/ru/docs/intro
-[accordion-js]: https://www.npmjs.com/package/accordion-js
-[Git]: https://git-scm.com/
-[Trello]: https://trello.com/
-[VS Code]: https://code.visualstudio.com/
-[dill]: https://github.com/andreigubsky/Paw-paws-little-house
