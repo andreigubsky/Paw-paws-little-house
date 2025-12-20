@@ -62,6 +62,7 @@
   height: 45px;
   background: var(--color-mariner-dark);
 }
+
 .pet-card__container {
   border-radius: 16px;
   padding: 12px;
@@ -150,7 +151,14 @@
   line-height: 1.5;
   color: var(--color-neutral-darkest);
   margin: auto auto 0;
+  transition: background-color 0.25s ease;
 }
+
+.pet-card__button:hover,
+.pet-card__button:focus {
+  background-color: var(--color-mariner-light);
+}
+
 .is-active {
   border-radius: 100px;
   background: var(--color-mariner-lighter);
@@ -183,9 +191,55 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 32px;
   }
   .pet-card {
-    width: calc((100% - 16px) / 2);
+    width: calc((100% - 32px) / 2);
   }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 64px;
+  }
+  .pet-title {
+    font-weight: 700;
+    font-size: 48px;
+    /* line-height: 58px; */
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .pet-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .pet-list {
+    margin-bottom: 40px;
+  }
+  .pet-card {
+    width: calc((100% - 64px) / 3);
+  }
+
+  .pet-card__species {
+    font-size: 12px;
+  }
+  .pet-card__name {
+    font-size: 24px;
+  }
+  .pet-card__group {
+    font-size: 12px;
+  }
+  .pet-card__meta-item {
+    font-size: 12px;
+  }
+  .pet-card__description {
+    font-size: 14px;
+  }
+}
+.pet-more {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

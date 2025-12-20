@@ -12,6 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!refs.petList || !refs.backdrop || !refs.modalWindow) return;
 
+  function onEscPress(e) {
+    if (e.key === 'Escape') {
+      refs.backdrop.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+      document.removeEventListener('keydown', onEscPress);
+    }
+  }
+
   refs.petList.addEventListener('click', e => {
     const btn = e.target.closest('.js-more-info');
     if (!btn) return;
@@ -41,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape' && refs.backdrop.classList.contains('is-open')) {
       closePetModal();
+      document.removeEventListener('keydown', onEscPress);
     }
   });
 
