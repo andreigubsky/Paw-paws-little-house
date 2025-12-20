@@ -92,6 +92,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -105,8 +106,4 @@ body {
   body {
     padding-top: 72px;
   }
-}
-
-.location {
-  padding: 32px 0;
 }
