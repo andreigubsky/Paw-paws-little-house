@@ -1,6 +1,67 @@
-const mobileMenu = document.querySelector('.location');
-const closeBtn = document.querySelector('.close-btn');
-closeBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('is-visible');
+document.addEventListener('DOMContentLoaded', () => {
+  const refsmenu = {
+    openMenuBtn: document.querySelector('[data-menu-open]'),
+    closeMenuBtn: document.querySelector('[data-menu-close]'),
+    menu: document.querySelector('#mobilemenu'),
+  };
+
+  if (refsmenu.openMenuBtn && refsmenu.menu) {
+    refsmenu.openMenuBtn.addEventListener('click', toggleMenu);
+  }
+
+  if (refsmenu.closeMenuBtn && refsmenu.menu) {
+    refsmenu.closeMenuBtn.addEventListener('click', toggleMenu);
+  }
+  
+  function onEscPress(e) {
+    if (e.key === 'Escape') {
+      refsmenu.menu.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+      document.removeEventListener('keydown', onEscPress);
+    }
+  }
+
+  function toggleMenu() {
+    const isOpen = refsmenu.menu.classList.contains('is-open');
+    refsmenu.menu.classList.toggle('is-open');
+    document.body.classList.toggle('no-scroll');
+
+    if (!isOpen) {
+      document.addEventListener('keydown', onEscPress);
+    } else {
+      document.removeEventListener('keydown', onEscPress);
+    }
+  }
+
+
+  refsmenu.menu?.addEventListener('click', e => {
+    if (e.target.tagName === 'A') {
+      refsmenu.menu.classList.remove('is-open');
+      document.body.classList.remove('no-scroll');
+      document.removeEventListener('keydown', onEscPress);
+    }
+  });
+
+
+  const refs = {
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
+  };
+
+  if (refs.openModalBtn && refs.modal) {
+    refs.openModalBtn.addEventListener('click', toggleModal);
+  }
+
+  if (refs.closeModalBtn && refs.modal) {
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  }
+
+  function toggleModal() {
+    refs.modal.classList.toggle('is-open');
+  }
+
 });
+
+
 

@@ -1,0 +1,64 @@
+/* ========================== pagination*/
+.js-pet-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+
+.js-pet-pagination button {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    border: 1px solid var(--color-mariner-light);
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.js-pet-pagination button:hover:not(:disabled) {
+    transform: scale(1.09);
+    border-color: var(--color-neutral-light);
+}
+
+.js-pet-pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+
+.js-pet-pagination button.is-active {
+    background: var(--color-scheme-1-foreground);
+    border-color: var(--color-neutral-light);
+}
+
+.js-pet-pagination .dots {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    padding: 0 8px;
+    opacity: 0.7;
+    user-select: none;
+}
+
+.js-pet-pagination button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+    .js-pet-pagination {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .js-pet-list {
+        overflow-anchor: none;
+    }
+}

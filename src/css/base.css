@@ -89,12 +89,21 @@
   --color-scheme-2-foreground: var(--color-mariner-dark);
   --color-red: #ae0000;
 }
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: var(--font-family);
   color: var(--color-scheme-1-text);
   background-color: var(--color-scheme-1-background);
+  padding-top: 64px;
 }
 
-.location {
-  padding: 32px 0;
+@media (min-width: 1440px) {
+  body {
+    padding-top: 72px;
+  }
 }

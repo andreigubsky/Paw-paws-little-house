@@ -2,32 +2,36 @@
 <footer class="footer">
   <div class="container">
     <!-- Logo -->
-    <a class="footer-logo-link" href="../index.html">
-      <svg class="footer-logo-img">
+    <a href="#" class="footer-logo-link" aria-label="Головна сторінка">
+      <svg class="footer-logo-img" aria-hidden="true" focusable="false">
         <use href="/img/sprite.svg#icon-logo"></use>
       </svg>
     </a>
 
     <!-- Footer links -->
-    <ul class="footer-anchor-list">
-      <li class="footer-anchor-item">
-        <a href="#about-us-section" class="footer-anchor-link">Про нас</a>
-      </li>
-      <li class="footer-anchor-item">
-        <a href="#pets-list-section" class="footer-anchor-link">Знайти друга</a>
-      </li>
-      <li class="footer-anchor-item">
-        <a href="#faq-section" class="footer-anchor-link">Часті запитання</a>
-      </li>
-      <li class="footer-anchor-item">
-        <a
-          href="#success-stories-section"
-          class="footer-anchor-link"
-          id="success-history"
-          >Історії успіху</a
-        >
-      </li>
-    </ul>
+    <nav aria-label="Навігація футера">
+      <ul class="footer-anchor-list">
+        <li class="footer-anchor-item">
+          <a href="#about-us-section" class="footer-anchor-link">Про нас</a>
+        </li>
+        <li class="footer-anchor-item">
+          <a href="#pet-list-section" class="footer-anchor-link"
+            >Знайти друга</a
+          >
+        </li>
+        <li class="footer-anchor-item">
+          <a href="#faq-section" class="footer-anchor-link">Часті запитання</a>
+        </li>
+        <li class="footer-anchor-item">
+          <a
+            href="#success-stories-section"
+            class="footer-anchor-link"
+            id="success-history"
+            >Історії успіху</a
+          >
+        </li>
+      </ul>
+    </nav>
 
     <!-- Social links -->
     <ul class="footer-social-list">
@@ -37,8 +41,15 @@
           href="https://www.facebook.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Facebook"
         >
-          <svg class="footer-social-icons" width="32px" height="32px">
+          <svg
+            class="footer-social-icons"
+            width="32px"
+            height="32px"
+            aria-hidden="true"
+            focusable="false"
+          >
             <use href="/img/sprite.svg#icon-facebook"></use>
           </svg>
         </a>
@@ -49,8 +60,15 @@
           href="https://www.instagram.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Instagram"
         >
-          <svg class="footer-social-icons" width="32px" height="32px">
+          <svg
+            class="footer-social-icons"
+            width="32px"
+            height="32px"
+            aria-hidden="true"
+            focusable="false"
+          >
             <use href="/img/sprite.svg#icon-instagram"></use>
           </svg>
         </a>

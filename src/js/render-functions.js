@@ -1,46 +1,8 @@
 // render-function.js
-import '/css/animations.css';
-
-const refs = {
-  gallery: document.querySelector('.js-gallery'),
-  loadMoreButton: document.querySelector('.js-loadmore-btn'),
-  loader: document.querySelector('.js-loader'),
-};
-
-export function createGallery(images) {
-  const markup = images
-    .map(({}) => {
-      return `<li class="gallery-item">
-                  // тут HTML розмітка однієї картки
-                </li>`;
-    })
-    .join('');
-  refs.gallery.insertAdjacentHTML('beforeend', markup);
-}
-
-export function clearGallery() {
-  refs.gallery.innerHTML = '';
-}
-
-export function showLoader() {
-  refs.gallery.classList.remove('is-shown');
-  refs.loader.classList.add('is-shown');
-}
-
-export function hideLoader() {
-  refs.loader.classList.remove('is-shown');
-  refs.gallery.classList.add('is-shown');
-}
-
-export function showLoadMoreButton() {
-  refs.loadMoreButton.classList.add('is-shown');
-}
-
-export function hideLoadMoreButton() {
-  refs.loadMoreButton.classList.remove('is-shown');
-}
-
-//!================================================
+import fullStar from '/img/SVG/star-filled.svg';
+import halfStar from '/img/SVG/star-half.svg';
+import emptyStar from '/img/SVG/star-outline.svg';
+import imgUrlClose from '/img/sprite.svg#icon-close'
 
 export function createTemplateCategory(category) {
   return `
@@ -102,4 +64,84 @@ export function createTemplatePet(pet) {
 export function createTemplatePets(pets) {
   return pets.map(createTemplatePet).join('');
 }
-//!================================================
+
+export function createModalTemplate(pet) {
+  return `
+    <div class="pet-modal">
+      <button
+        type="button"
+        class="pet-modal-close js-modal-close"
+        aria-label="Close modal"
+      >
+        <svg width="24" height="24">
+            <use href="${imgUrlClose}" width="24" height="24"></use>
+          </svg>
+      </button>
+
+      <div class="pet-modal-content">
+        <div class="pet-modal-image">
+          <img src="${pet.image}" alt="${pet.name}" />
+        </div>
+
+        <div class="pet-modal-info">
+          <p class="pet-modal-species">${pet.species}</p>
+
+          <h2 class="pet-modal-name">${pet.name}</h2>
+
+          <p class="pet-modal-meta">
+            <span>${pet.age}</span>
+            <span>${pet.gender}</span>
+          </p>
+
+          <h3>Опис:</h3>
+          <p>${pet.description}</p>
+
+          <h3>Здоровʼя:</h3>
+          <p>${pet.healthStatus}</p>
+
+          <h3>Поведінка:</h3>
+          <p>${pet.behavior}</p>
+
+          <button class="take-home js-takehome-btn" data-id="${pet._id}">
+            Взяти додому
+          </button>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+export function renderStars(container, score, maxStars = 5) {
+  container.innerHTML = '';
+  const roundedScore = Math.round(score * 2) / 2;
+  for (let i = 1; i <= maxStars; i++) {
+    const img = document.createElement('img');
+    img.className = 'icon-star';
+    img.alt = 'star rating';
+    if (roundedScore >= i) {
+      img.src = fullStar;
+    } else if (roundedScore >= i - 0.5) {
+      img.src = halfStar;
+    } else {
+      img.src = emptyStar;
+    }
+    container.appendChild(img);
+  }
+}
+
+export function createReviewCardMarkup(review) {
+  const rating = review.rate;
+  const comment = review.description;
+  const author = review.author;
+  return `
+    <div class="swiper-slide review-card">
+      <div class="review-rating">
+          <div class="rating-container" data-score="${rating}"></div>
+      </div>
+      <p class="review-text">${comment}</p>
+      <div class="review-author-wrap">
+        <h3 class="review-author">${author}</h3>
+      </div>
+    </div>
+  `;
+}

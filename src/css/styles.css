@@ -8,7 +8,6 @@
 @import url('/css/reset.css');
 @import url('/css/base.css');
 @import url('/css/container.css');
-@import url('/css/animations.css');
 
 /* Sections style */
 @import url('/css/header.css');
@@ -21,3 +20,4 @@
 @import url('/css/order-modal.css');
 @import url('/css/pet-modal.css');
 @import url('/css/footer.css');
+@import url('/css/pagination.css');

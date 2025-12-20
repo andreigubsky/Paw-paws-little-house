@@ -1,17 +1,40 @@
 <!-- header.html -->
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
+  <div class="container header-container">
+    <div class="wrapper-navigation">
+      <a href="#" class="logo-image" aria-label="Головна сторінка">
+        <svg aria-hidden="true" focusable="false">
+          <use href="/img/sprite.svg#icon-logo"></use>
         </svg>
       </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-
-        </li>
-      </ul>
-    </nav>
+      <nav class="nav" aria-label="Головна навігація">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="#pet-list-section" class="nav-link">Знайди друга</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about-us-section" class="nav-link">Про нас</a>
+          </li>
+          <li class="nav-item">
+            <a href="#faq-section" class="nav-link">Часті запитання</a>
+          </li>
+          <li class="nav-item">
+            <a href="#success-stories-section" class="nav-link"
+              >Історії успіху</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <button
+      class="burger-btn"
+      aria-label="Відкрити меню навігації"
+      data-menu-open
+    >
+      <svg class="icon-burger" aria-hidden="true">
+        <use href="/img/sprite.svg#icon-burger-menu"></use>
+      </svg>
+    </button>
+    <a href="#pet-list-section" class="take-a-friend-header">Взяти друга</a>
   </div>
 </header>

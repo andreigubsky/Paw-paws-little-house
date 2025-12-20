@@ -3,15 +3,16 @@ import { Navigation, Pagination, Keyboard } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import '../css/about-us.css';
 
 const SwiperContainer =
-  document.querySelector('.about-us-slider .mySwiper') || document.querySelector('.mySwiper');
+  document.querySelector('.about-us-slider .mySwiper') ||
+  document.querySelector('.mySwiper');
 if (SwiperContainer) {
   new Swiper(SwiperContainer, {
     modules: [Navigation, Pagination, Keyboard],
     slidesPerView: 1,
     spaceBetween: 30,
+    speed: 700,
     keyboard: {
       enabled: true,
     },
