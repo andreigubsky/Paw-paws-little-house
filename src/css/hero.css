@@ -53,6 +53,7 @@
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin-top: 32px;
+  border: 1px solid transparent;
 }
 
 #success-history {
@@ -62,7 +63,7 @@
 .hero-button:hover,
 .hero-button:focus {
   background-color: var(--color-mariner);
-  border: var(--color-neutral-darkest) 1px solid;
+  border-color: var(--color-neutral-darkest);
   color: var(--color-neutral-darkest);
 }
 
