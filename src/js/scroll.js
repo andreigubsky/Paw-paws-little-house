@@ -1,5 +1,5 @@
 function getHeaderOffset() {
-  return window.innerWidth >= 1440 ? 72 : 64;
+  return window.innerWidth >= 1440 ? 82 : 74;
 }
 
 export function scrollToCategories(element) {

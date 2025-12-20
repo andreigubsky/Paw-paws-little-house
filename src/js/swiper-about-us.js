@@ -5,12 +5,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 const SwiperContainer =
-  document.querySelector('.about-us-slider .mySwiper') || document.querySelector('.mySwiper');
+  document.querySelector('.about-us-slider .mySwiper') ||
+  document.querySelector('.mySwiper');
 if (SwiperContainer) {
   new Swiper(SwiperContainer, {
     modules: [Navigation, Pagination, Keyboard],
     slidesPerView: 1,
     spaceBetween: 30,
+    speed: 700,
     keyboard: {
       enabled: true,
     },

@@ -20,7 +20,7 @@ async function initReviewsSection() {
   });
   new Swiper('.reviews-swiper', {
     modules: [Navigation, Pagination],
-    speed: 500,
+    speed: 700,
     spaceBetween: 16,
     slidesPerView: 1,
     grabCursor: true,
