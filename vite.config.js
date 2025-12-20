@@ -61,9 +61,12 @@ export default defineConfig(({ command }) => {
                 },
                 cacheableResponse: {
                   statuses: [0, 200],
-            }
-
+                },
+              },
+            },
+          ],
         },
+      }),
     ],
   };
 });
