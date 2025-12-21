@@ -78,7 +78,7 @@ export function createModalTemplate(pet) {
       <button
         type="button"
         class="pet-modal-close js-modal-close"
-        aria-label="Close modal"
+        aria-label="Close pet modal"
       >
         <svg width="24" height="24">
             <use href="${imgUrlClose}" width="24" height="24"></use>

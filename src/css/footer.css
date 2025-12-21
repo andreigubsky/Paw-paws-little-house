@@ -51,17 +51,30 @@
     font-size: 14px;
   }
 
-  .footer-anchor-item:hover,
-  .footer-anchor-item:focus {
-    cursor: pointer;
-    color: var(--color-neutral-darkest);
-    text-decoration: underline;
+  .footer-anchor-link {
+    display: inline-block;
+  }
+  .footer-anchor-link:active {
+    color: var(--color-mariner-dark);
   }
 
-  .footer-anchor-item:active {
-    color: var(--color-mariner-dark);
-    text-decoration: underline;
+  .footer-anchor-link::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: var(--color-neutral-darkest);
+    transition: 300ms;
   }
+
+  .footer-anchor-link:hover::after,   
+  .footer-anchor-item:focus::after {
+    width: 100%;
+  }
+  .footer-anchor-link:active::after {
+    background: var(--color-mariner-dark);
+  }
+  
 }
 
 /* Social links */
