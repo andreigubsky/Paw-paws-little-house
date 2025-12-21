@@ -10,7 +10,7 @@ import{a as L,i as A,S as I,N,P as X,K as W,A as V}from"./assets/vendor-BHTA0HFl
         Всі
       </button>
     </li>
-  `+e.map(K).join("")}function F(e){const t=e.categories.map(n=>`<li class="pet-card__group">${n.name}</li>`).join("");return AOS.init({duration:1500,once:!1}),`
+  `+e.map(K).join("")}function F(e){const t=e.categories.map(n=>`<li class="pet-card__group">${n.name}</li>`).join("");return`
   <li class="pet-card" data-aos="fade-up">
     <div class="pet-card__container">
         <img class="pet-card__image" src="${e.image}" alt="${e.name}" loading="lazy"/>
