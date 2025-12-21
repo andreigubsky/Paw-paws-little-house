@@ -33,10 +33,10 @@ export function createTemplatePet(pet) {
     .map(cat => `<li class="pet-card__group">${cat.name}</li>`)
     .join('');
 
-  AOS.init({
-    duration: 1500, // optional settings
-    once: false,   // whether animation should happen only once - while scrolling down
-  });
+  // AOS.init({
+  //   duration: 1500, // optional settings
+  //   once: false,   // whether animation should happen only once - while scrolling down
+  // });
 
   return `
   <li class="pet-card" data-aos="fade-up">
