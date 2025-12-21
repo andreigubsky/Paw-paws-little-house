@@ -3,6 +3,8 @@ import fullStar from '/img/SVG/star-filled.svg';
 import halfStar from '/img/SVG/star-half.svg';
 import emptyStar from '/img/SVG/star-outline.svg';
 import imgUrlClose from '/img/sprite.svg#icon-close'
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 
 export function createTemplateCategory(category) {
   return `
@@ -31,8 +33,13 @@ export function createTemplatePet(pet) {
     .map(cat => `<li class="pet-card__group">${cat.name}</li>`)
     .join('');
 
+  // AOS.init({
+  //   duration: 1500, // optional settings
+  //   once: false,   // whether animation should happen only once - while scrolling down
+  // });
+
   return `
-  <li class="pet-card">
+  <li class="pet-card" data-aos="fade-up">
     <div class="pet-card__container">
         <img class="pet-card__image" src="${pet.image}" alt="${pet.name}" loading="lazy"/>
       
@@ -67,7 +74,7 @@ export function createTemplatePets(pets) {
 
 export function createModalTemplate(pet) {
   return `
-    <div class="pet-modal">
+    <div class="pet-modal" data-aos="zoom-in">
       <button
         type="button"
         class="pet-modal-close js-modal-close"
