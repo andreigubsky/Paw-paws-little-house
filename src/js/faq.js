@@ -1,5 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import sprite from '../img/sprite.svg?url';
 // import imgUrlAdd from '/img/sprite.svg#icon-add';
 // import imgUrlClose from '/img/sprite.svg#icon-close';
 const imgUrlAdd = '/img/sprite.svg#icon-add';
@@ -18,10 +19,10 @@ new Accordion('.accordion-container', {
   showMultiple: false,
   onOpen: currentElement => {
     const icon = currentElement.querySelector('.faq-icon-use');
-    icon.href.baseVal = imgUrlClose;
+    icon.setAttribute('href', imgUrlClose);
   },
   onClose: currentElement => {
     const icon = currentElement.querySelector('.faq-icon-use');
-    icon.href.baseVal = imgUrlAdd;
+    icon.setAttribute('href', imgUrlAdd);
   },
 });
